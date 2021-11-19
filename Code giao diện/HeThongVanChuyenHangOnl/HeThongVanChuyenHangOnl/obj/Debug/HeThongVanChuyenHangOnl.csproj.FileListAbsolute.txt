@@ -1,0 +1,13 @@
+D:\Database Management System\HeThongVanChuyenHangOnl\HeThongVanChuyenHangOnl\bin\Debug\HeThongVanChuyenHangOnl.exe.config
+D:\Database Management System\HeThongVanChuyenHangOnl\HeThongVanChuyenHangOnl\bin\Debug\HeThongVanChuyenHangOnl.exe
+D:\Database Management System\HeThongVanChuyenHangOnl\HeThongVanChuyenHangOnl\bin\Debug\HeThongVanChuyenHangOnl.pdb
+D:\Database Management System\HeThongVanChuyenHangOnl\HeThongVanChuyenHangOnl\obj\Debug\HeThongVanChuyenHangOnl.csprojAssemblyReference.cache
+D:\Database Management System\HeThongVanChuyenHangOnl\HeThongVanChuyenHangOnl\obj\Debug\HeThongVanChuyenHangOnl.Main.resources
+D:\Database Management System\HeThongVanChuyenHangOnl\HeThongVanChuyenHangOnl\obj\Debug\HeThongVanChuyenHangOnl.Properties.Resources.resources
+D:\Database Management System\HeThongVanChuyenHangOnl\HeThongVanChuyenHangOnl\obj\Debug\HeThongVanChuyenHangOnl.csproj.GenerateResource.cache
+D:\Database Management System\HeThongVanChuyenHangOnl\HeThongVanChuyenHangOnl\obj\Debug\HeThongVanChuyenHangOnl.csproj.CoreCompileInputs.cache
+D:\Database Management System\HeThongVanChuyenHangOnl\HeThongVanChuyenHangOnl\obj\Debug\HeThongVanChuyenHangOnl.exe
+D:\Database Management System\HeThongVanChuyenHangOnl\HeThongVanChuyenHangOnl\obj\Debug\HeThongVanChuyenHangOnl.pdb
+D:\Database Management System\HeThongVanChuyenHangOnl\HeThongVanChuyenHangOnl\obj\Debug\HeThongVanChuyenHangOnl.ThongTinDoanhNghiep.resources
+D:\Database Management System\HeThongVanChuyenHangOnl\HeThongVanChuyenHangOnl\obj\Debug\HeThongVanChuyenHangOnl.ThongTinSanPham.resources
+D:\Database Management System\HeThongVanChuyenHangOnl\HeThongVanChuyenHangOnl\obj\Debug\HeThongVanChuyenHangOnl.TimKiemDoanhNghiep.resources
