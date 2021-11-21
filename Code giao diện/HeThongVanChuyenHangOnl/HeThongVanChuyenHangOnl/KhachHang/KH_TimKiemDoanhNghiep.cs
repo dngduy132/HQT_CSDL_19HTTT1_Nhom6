@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace HeThongVanChuyenHangOnl
 {
-    public partial class ThongTinDoanhNghiep : Form
+    public partial class KH_TimKiemDoanhNghiep : Form
     {
-        public ThongTinDoanhNghiep()
+        public KH_TimKiemDoanhNghiep()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace HeThongVanChuyenHangOnl
 {
-    public partial class TimKiemDoanhNghiep : Form
+    public partial class KH_ThongTinSanPham : Form
     {
-        public TimKiemDoanhNghiep()
+        public KH_ThongTinSanPham()
         {
             InitializeComponent();
         }

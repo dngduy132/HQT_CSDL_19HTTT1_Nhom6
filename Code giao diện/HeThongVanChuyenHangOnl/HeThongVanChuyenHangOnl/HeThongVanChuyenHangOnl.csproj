@@ -46,6 +46,48 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DoanhNghiep\DN_CapNhatThongTinSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoanhNghiep\DN_CapNhatThongTinSanPham.Designer.cs">
+      <DependentUpon>DN_CapNhatThongTinSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoanhNghiep\DN_ThemMoiSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoanhNghiep\DN_ThemMoiSanPham.Designer.cs">
+      <DependentUpon>DN_ThemMoiSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoanhNghiep\DN_XemDanhSachDonDatHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoanhNghiep\DN_XemDanhSachDonDatHang.Designer.cs">
+      <DependentUpon>DN_XemDanhSachDonDatHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoanhNghiep\DN_XemDanhSachSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoanhNghiep\DN_XemDanhSachSanPham.Designer.cs">
+      <DependentUpon>DN_XemDanhSachSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KhachHang\KH_MuaHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KhachHang\KH_MuaHang.Designer.cs">
+      <DependentUpon>KH_MuaHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KhachHang\KH_ThongKeSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KhachHang\KH_ThongKeSanPham.Designer.cs">
+      <DependentUpon>KH_ThongKeSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KhachHang\KH_TimKiemSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KhachHang\KH_TimKiemSanPham.Designer.cs">
+      <DependentUpon>KH_TimKiemSanPham.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,24 +96,63 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ThongTinDoanhNghiep.cs">
+    <Compile Include="QuanTri\QT_CapNhatThongTinDoanhNghiep.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ThongTinDoanhNghiep.Designer.cs">
-      <DependentUpon>ThongTinDoanhNghiep.cs</DependentUpon>
+    <Compile Include="QuanTri\QT_CapNhatThongTinDoanhNghiep.Designer.cs">
+      <DependentUpon>QT_CapNhatThongTinDoanhNghiep.cs</DependentUpon>
     </Compile>
-    <Compile Include="ThongTinSanPham.cs">
+    <Compile Include="QuanTri\QT_XemThongTinDoanhNghiep.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ThongTinSanPham.Designer.cs">
-      <DependentUpon>ThongTinSanPham.cs</DependentUpon>
+    <Compile Include="QuanTri\QT_XemThongTinDoanhNghiep.Designer.cs">
+      <DependentUpon>QT_XemThongTinDoanhNghiep.cs</DependentUpon>
     </Compile>
-    <Compile Include="TimKiemDoanhNghiep.cs">
+    <Compile Include="KhachHang\KH_ThongTinDoanhNghiep.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TimKiemDoanhNghiep.Designer.cs">
-      <DependentUpon>TimKiemDoanhNghiep.cs</DependentUpon>
+    <Compile Include="KhachHang\KH_ThongTinDoanhNghiep.Designer.cs">
+      <DependentUpon>KH_ThongTinDoanhNghiep.cs</DependentUpon>
     </Compile>
+    <Compile Include="KhachHang\KH_ThongTinSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KhachHang\KH_ThongTinSanPham.Designer.cs">
+      <DependentUpon>KH_ThongTinSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KhachHang\KH_TimKiemDoanhNghiep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KhachHang\KH_TimKiemDoanhNghiep.Designer.cs">
+      <DependentUpon>KH_TimKiemDoanhNghiep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaiXe\TX_NhanGiaoHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaiXe\TX_NhanGiaoHang.Designer.cs">
+      <DependentUpon>TX_NhanGiaoHang.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DoanhNghiep\DN_CapNhatThongTinSanPham.resx">
+      <DependentUpon>DN_CapNhatThongTinSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoanhNghiep\DN_ThemMoiSanPham.resx">
+      <DependentUpon>DN_ThemMoiSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoanhNghiep\DN_XemDanhSachDonDatHang.resx">
+      <DependentUpon>DN_XemDanhSachDonDatHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoanhNghiep\DN_XemDanhSachSanPham.resx">
+      <DependentUpon>DN_XemDanhSachSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KhachHang\KH_MuaHang.resx">
+      <DependentUpon>KH_MuaHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KhachHang\KH_ThongKeSanPham.resx">
+      <DependentUpon>KH_ThongKeSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KhachHang\KH_TimKiemSanPham.resx">
+      <DependentUpon>KH_TimKiemSanPham.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
@@ -84,14 +165,23 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ThongTinDoanhNghiep.resx">
-      <DependentUpon>ThongTinDoanhNghiep.cs</DependentUpon>
+    <EmbeddedResource Include="QuanTri\QT_CapNhatThongTinDoanhNghiep.resx">
+      <DependentUpon>QT_CapNhatThongTinDoanhNghiep.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ThongTinSanPham.resx">
-      <DependentUpon>ThongTinSanPham.cs</DependentUpon>
+    <EmbeddedResource Include="QuanTri\QT_XemThongTinDoanhNghiep.resx">
+      <DependentUpon>QT_XemThongTinDoanhNghiep.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TimKiemDoanhNghiep.resx">
-      <DependentUpon>TimKiemDoanhNghiep.cs</DependentUpon>
+    <EmbeddedResource Include="KhachHang\KH_ThongTinDoanhNghiep.resx">
+      <DependentUpon>KH_ThongTinDoanhNghiep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KhachHang\KH_ThongTinSanPham.resx">
+      <DependentUpon>KH_ThongTinSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KhachHang\KH_TimKiemDoanhNghiep.resx">
+      <DependentUpon>KH_TimKiemDoanhNghiep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaiXe\TX_NhanGiaoHang.resx">
+      <DependentUpon>TX_NhanGiaoHang.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -106,5 +196,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
