@@ -8,16 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace HeThongVanChuyenHangOnl
+namespace HeThongVanChuyenHangOnl.KhachHang
 {
-    public partial class TimKiemDoanhNghiep : Form
+    public partial class KH_ThongTinSanPham : Form
     {
-        public TimKiemDoanhNghiep()
+        public KH_ThongTinSanPham()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void KH_ThongTinSanPham_Load(object sender, EventArgs e)
         {
 
         }

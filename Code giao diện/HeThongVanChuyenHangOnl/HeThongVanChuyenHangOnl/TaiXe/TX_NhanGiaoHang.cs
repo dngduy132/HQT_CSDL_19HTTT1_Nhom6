@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace HeThongVanChuyenHangOnl
+namespace HeThongVanChuyenHangOnl.TaiXe
 {
-    public partial class ThongTinSanPham : Form
+    public partial class TX_NhanGiaoHang : Form
     {
-        public ThongTinSanPham()
+        public TX_NhanGiaoHang()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

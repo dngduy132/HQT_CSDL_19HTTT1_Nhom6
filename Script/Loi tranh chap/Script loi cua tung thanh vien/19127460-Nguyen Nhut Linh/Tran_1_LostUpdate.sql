@@ -1,7 +1,6 @@
 ﻿-- T1: Tài xế 1 (TX11736641) xác nhận giao hóa đơn có mã hóa đơn  HD56451566
 -- T2: Tài xế 2 (TX23114712) đồng thời xác nhận giao hóa đơn có mã hóa đơn  HD56451566
 -- Số lượng tài xế tối đa của 1 hóa đơn là 1
--- Số lượng sản phẩm mong muốn sau khi chạy các giao tác: 0
 
 
 BEGIN TRAN
