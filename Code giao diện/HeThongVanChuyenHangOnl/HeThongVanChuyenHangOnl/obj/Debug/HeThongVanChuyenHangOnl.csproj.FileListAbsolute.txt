@@ -41,7 +41,6 @@ D:\Github\HQT_CSDL_19HTTT1_Nhom6\Code giao diện\HeThongVanChuyenHangOnl\HeThon
 D:\Github\HQT_CSDL_19HTTT1_Nhom6\Code giao diện\HeThongVanChuyenHangOnl\HeThongVanChuyenHangOnl\obj\Debug\HeThongVanChuyenHangOnl.DoanhNghiep.DN_CapNhatThongTinSanPham.resources
 D:\Github\HQT_CSDL_19HTTT1_Nhom6\Code giao diện\HeThongVanChuyenHangOnl\HeThongVanChuyenHangOnl\obj\Debug\HeThongVanChuyenHangOnl.DoanhNghiep.DN_ThemMoiSanPham.resources
 D:\Github\HQT_CSDL_19HTTT1_Nhom6\Code giao diện\HeThongVanChuyenHangOnl\HeThongVanChuyenHangOnl\obj\Debug\HeThongVanChuyenHangOnl.DoanhNghiep.DN_XemDanhSachDonDatHang.resources
-D:\Github\HQT_CSDL_19HTTT1_Nhom6\Code giao diện\HeThongVanChuyenHangOnl\HeThongVanChuyenHangOnl\obj\Debug\HeThongVanChuyenHangOnl.DoanhNghiep.DN_XemDanhSachSanPham.resources
 D:\Github\HQT_CSDL_19HTTT1_Nhom6\Code giao diện\HeThongVanChuyenHangOnl\HeThongVanChuyenHangOnl\obj\Debug\HeThongVanChuyenHangOnl.KhachHang.KH_MuaHang.resources
 D:\Github\HQT_CSDL_19HTTT1_Nhom6\Code giao diện\HeThongVanChuyenHangOnl\HeThongVanChuyenHangOnl\obj\Debug\HeThongVanChuyenHangOnl.KhachHang.KH_ThongKeSanPham.resources
 D:\Github\HQT_CSDL_19HTTT1_Nhom6\Code giao diện\HeThongVanChuyenHangOnl\HeThongVanChuyenHangOnl\obj\Debug\HeThongVanChuyenHangOnl.KhachHang.KH_TimKiemSanPham.resources

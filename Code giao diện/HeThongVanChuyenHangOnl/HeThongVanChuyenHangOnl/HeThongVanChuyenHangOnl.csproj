@@ -64,12 +64,6 @@
     <Compile Include="DoanhNghiep\DN_XemDanhSachDonDatHang.Designer.cs">
       <DependentUpon>DN_XemDanhSachDonDatHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="DoanhNghiep\DN_XemDanhSachSanPham.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DoanhNghiep\DN_XemDanhSachSanPham.Designer.cs">
-      <DependentUpon>DN_XemDanhSachSanPham.cs</DependentUpon>
-    </Compile>
     <Compile Include="KhachHang\KH_MuaHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,9 +146,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DoanhNghiep\DN_XemDanhSachDonDatHang.resx">
       <DependentUpon>DN_XemDanhSachDonDatHang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DoanhNghiep\DN_XemDanhSachSanPham.resx">
-      <DependentUpon>DN_XemDanhSachSanPham.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KhachHang\KH_MuaHang.resx">
       <DependentUpon>KH_MuaHang.cs</DependentUpon>

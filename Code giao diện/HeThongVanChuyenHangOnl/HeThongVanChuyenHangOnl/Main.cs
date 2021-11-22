@@ -78,14 +78,6 @@ namespace HeThongVanChuyenHangOnl
             frm.Show();
         }
 
-        private void XemDanhSachSanPham_Click(object sender, EventArgs e)
-        {
-            DoanhNghiep.DN_XemDanhSachSanPham frm = new DoanhNghiep.DN_XemDanhSachSanPham();
-            frm.MdiParent = this;
-            frm.Name = "DN_XemDanhSachSanPham";
-            frm.Show();
-        }
-
         private void CapNhatThongTinSanPham_Click(object sender, EventArgs e)
         {
             DoanhNghiep.DN_CapNhatThongTinSanPham frm = new DoanhNghiep.DN_CapNhatThongTinSanPham();
