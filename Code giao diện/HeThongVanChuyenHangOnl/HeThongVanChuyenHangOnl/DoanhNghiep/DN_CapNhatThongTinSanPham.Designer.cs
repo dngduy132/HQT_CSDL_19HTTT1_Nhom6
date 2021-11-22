@@ -166,6 +166,7 @@ namespace HeThongVanChuyenHangOnl.DoanhNghiep
             this.Controls.Add(this.label1);
             this.Name = "DN_CapNhatThongTinSanPham";
             this.Text = "DN_CapNhatThongTinSanPham";
+            this.Load += new System.EventHandler(this.DN_CapNhatThongTinSanPham_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace HeThongVanChuyenHangOnl
+namespace HeThongVanChuyenHangOnl.QuanTri
 {
     public partial class QT_CapNhatThongTinDoanhNghiep : Form
     {
@@ -23,6 +23,11 @@ namespace HeThongVanChuyenHangOnl
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void QT_CapNhatThongTinDoanhNghiep_Load(object sender, EventArgs e)
         {
 
         }

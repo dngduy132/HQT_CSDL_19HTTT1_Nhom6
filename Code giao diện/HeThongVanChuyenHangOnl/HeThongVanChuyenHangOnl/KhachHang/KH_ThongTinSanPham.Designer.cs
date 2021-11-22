@@ -1,5 +1,5 @@
 ﻿
-namespace HeThongVanChuyenHangOnl
+namespace HeThongVanChuyenHangOnl.KhachHang
 {
     partial class KH_ThongTinSanPham
     {
@@ -108,6 +108,7 @@ namespace HeThongVanChuyenHangOnl
             this.Controls.Add(this.label1);
             this.Name = "KH_ThongTinSanPham";
             this.Text = "KH_ThongTinSanPham";
+            this.Load += new System.EventHandler(this.KH_ThongTinSanPham_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
