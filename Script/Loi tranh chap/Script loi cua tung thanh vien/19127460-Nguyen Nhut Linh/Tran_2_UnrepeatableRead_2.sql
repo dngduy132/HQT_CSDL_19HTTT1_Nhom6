@@ -1,8 +1,10 @@
-﻿--T1 : KHÁCH HÀNG TÌM SẢN PHẨM CÓ GIÁ BÉ HƠN 1TR
---T2 : DOANH NGHIỆP CẬP NHẬT SẢN PHẨM CÓ GIÁ BÉ HƠN 1TR THÀNH 1TR1
---T1 : KHÁCH HÀNG TÌM LẠI SẢN PHẨM CÓ GIÁ BÉ HƠN 1TR
+﻿--T1 : Khách hàng tìm xem có tồn tại doanh nghiệp có tên Trupebistor Direct ở Quận Tân Bình
+--và truy xuất thông tin doanh nghiệp 
+--T2 : Quản trị đổi quận của doanh nghiệp 
 
-UPDATE  SAN_PHAM
-SET GIA =1100000
-WHERE GIA<1000000
+BEGIN TRAN
+	UPDATE dbo.DOANH_NGHIEP
+	SET QUAN = N'Quận 5'
+	WHERE TEN_DN = 'Trupebistor Direct' AND QUAN = N'Quận Tân Bình'
+COMMIT TRAN
 
