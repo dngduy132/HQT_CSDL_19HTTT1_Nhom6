@@ -1,6 +1,8 @@
-﻿--T1 : KHÁCH HÀNG TÌM SẢN PHẨM CÓ MÃ SẢN PHẨM : SP26049509
---T2 : DOANH NGHIỆP XÓA SẢN PHẨM CÓ MÃ SẢN PHẨM :SP26049509
---T1 : KHÁCH HÀNG TÌM LẠI SẢN PHẨM CÓ MÃ SẢN PHẨM : SP26049509
+﻿--T1 : Khách hàng tìm xem có tồn tại sản phẩm có mã là SP26049509 và tên là Ly uống nước
+--T2 : Doanh nghiệp đổi tên sản phẩm có mã là SP26049509
 
-DELETE FROM SAN_PHAM
-WHERE MA_SP='SP26049509'
+BEGIN TRANSACTION
+	UPDATE dbo.SAN_PHAM
+	SET TEN_SP = N'Ly uống trà'
+	WHERE MA_SP = 'SP26049509'
+COMMIT TRANSACTION
