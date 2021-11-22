@@ -31,5 +31,10 @@ namespace HeThongVanChuyenHangOnl.DoanhNghiep
         {
 
         }
+
+        private void DN_CapNhatThongTinSanPham_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

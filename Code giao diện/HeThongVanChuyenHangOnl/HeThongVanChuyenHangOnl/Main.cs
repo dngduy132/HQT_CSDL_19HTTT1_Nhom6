@@ -24,7 +24,7 @@ namespace HeThongVanChuyenHangOnl
         
         private void XemThongTinSanPham_Click(object sender, EventArgs e)
         {
-            KH_ThongTinSanPham frm = new KH_ThongTinSanPham();
+            KhachHang.KH_ThongTinSanPham frm = new KhachHang.KH_ThongTinSanPham();
             frm.MdiParent = this;
             frm.Name = "KH_ThongTinSanPham";
             frm.Show();
@@ -32,7 +32,7 @@ namespace HeThongVanChuyenHangOnl
 
         private void XemThongTinDoanhNghiep_Click(object sender, EventArgs e)
         {
-            KH_ThongTinDoanhNghiep frm = new KH_ThongTinDoanhNghiep();
+            KhachHang.KH_ThongTinDoanhNghiep frm = new KhachHang.KH_ThongTinDoanhNghiep();
             frm.MdiParent = this;
             frm.Name = "KH_ThongTinDoanhNghiep";
             frm.Show();
@@ -40,7 +40,7 @@ namespace HeThongVanChuyenHangOnl
 
         private void TimKiemDoanhNghiep_Click(object sender, EventArgs e)
         {
-            KH_TimKiemDoanhNghiep frm = new KH_TimKiemDoanhNghiep();
+            KhachHang.KH_TimKiemDoanhNghiep frm = new KhachHang.KH_TimKiemDoanhNghiep();
             frm.MdiParent = this;
             frm.Name = "KH_TimKiemDoanhNghiep";
             frm.Show();
@@ -56,7 +56,7 @@ namespace HeThongVanChuyenHangOnl
 
         private void ThongKeSanPham_Click(object sender, EventArgs e)
         {
-            KH_ThongKeSanPham frm = new KH_ThongKeSanPham();
+            KhachHang.KH_ThongKeSanPham frm = new KhachHang.KH_ThongKeSanPham();
             frm.MdiParent = this;
             frm.Name = "KH_ThongKeSanPham";
             frm.Show();
@@ -112,7 +112,7 @@ namespace HeThongVanChuyenHangOnl
 
         private void QT_XemThongTinDoanhNghiep_Click(object sender, EventArgs e)
         {
-            QT_XemThongTinDoanhNghiep frm = new QT_XemThongTinDoanhNghiep();
+            QuanTri.QT_XemThongTinDoanhNghiep frm = new QuanTri.QT_XemThongTinDoanhNghiep();
             frm.MdiParent = this;
             frm.Name = "QT_XemThongTinDoanhNghiep";
             frm.Show();
@@ -120,7 +120,7 @@ namespace HeThongVanChuyenHangOnl
 
         private void CapNhatThongTinDoanhNghiep_Click(object sender, EventArgs e)
         {
-            QT_CapNhatThongTinDoanhNghiep frm = new QT_CapNhatThongTinDoanhNghiep();
+            QuanTri.QT_CapNhatThongTinDoanhNghiep frm = new QuanTri.QT_CapNhatThongTinDoanhNghiep();
             frm.MdiParent = this;
             frm.Name = "QT_CapNhatThongTinDoanhNghiep";
             frm.Show();

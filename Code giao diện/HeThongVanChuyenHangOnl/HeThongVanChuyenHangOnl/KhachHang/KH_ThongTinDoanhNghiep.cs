@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace HeThongVanChuyenHangOnl
+namespace HeThongVanChuyenHangOnl.KhachHang
 {
     public partial class KH_ThongTinDoanhNghiep : Form
     {
@@ -18,6 +18,11 @@ namespace HeThongVanChuyenHangOnl
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void KH_ThongTinDoanhNghiep_Load(object sender, EventArgs e)
         {
 
         }

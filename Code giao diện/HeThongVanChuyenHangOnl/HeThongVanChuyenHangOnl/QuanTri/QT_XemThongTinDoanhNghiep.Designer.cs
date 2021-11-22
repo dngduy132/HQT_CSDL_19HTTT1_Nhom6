@@ -1,5 +1,5 @@
 ﻿
-namespace HeThongVanChuyenHangOnl
+namespace HeThongVanChuyenHangOnl.QuanTri
 {
     partial class QT_XemThongTinDoanhNghiep
     {
@@ -42,7 +42,7 @@ namespace HeThongVanChuyenHangOnl
             this.label1.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(223, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(367, 38);
+            this.label1.Size = new System.Drawing.Size(353, 37);
             this.label1.TabIndex = 0;
             this.label1.Text = "Thông tin doanh nghiệp";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -76,6 +76,7 @@ namespace HeThongVanChuyenHangOnl
             this.Controls.Add(this.dataGridView1);
             this.Name = "QT_XemThongTinDoanhNghiep";
             this.Text = "QT_XemThongTinDoanhNghiep";
+            this.Load += new System.EventHandler(this.QT_XemThongTinDoanhNghiep_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
