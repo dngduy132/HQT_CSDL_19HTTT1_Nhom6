@@ -1,16 +1,19 @@
-﻿--T1: Khách hàng xem số lượng sản phẩm có giá = 10000.
+﻿--T1: Khách hàng xem số lượng sản phẩm có giá > 10000 của doanh nghiệp
 --T2: Doanh nghiệp cập nhật giá sản phẩm.
---Khách hàng xem số lượng sản phẩm có giá = 10000 lần 1 là 0.
---Khách hàng xem số lượng sản phẩm có giá = 10000 lần 2 là 1.
+--Khách hàng xem số lượng các sản phẩm có giá > 10000 lần 1 là 21.
+--Khách hàng xem số lượng các sản phẩm có giá > 10000 lần 2 là 20 và xem danh sách các sản phẩm.
 
 BEGIN TRAN
-	SELECT count(GIA)
-	FROM SAN_PHAM
-	WHERE GIA = 10000
+	SELECT  COUNT(DISTINCT SP.MA_SP)
+	from SAN_PHAM SP, DOANH_NGHIEP DN, CHI_NHANH CN, CHINHANH_SANPHAM CNSP 
+	WHERE DN.MADN = N'DN83267769' AND SP.GIA > 10000 AND CN.MADN = DN.MADN AND SP.MA_SP = CNSP.MA_SP
 
 	WAITFOR DELAY '00:00:10'
 
-	SELECT count(GIA)
-	FROM SAN_PHAM
-	WHERE GIA = 10000
+	SELECT  COUNT(DISTINCT SP.MA_SP)
+	from SAN_PHAM SP, DOANH_NGHIEP DN, CHI_NHANH CN, CHINHANH_SANPHAM CNSP 
+	WHERE DN.MADN = N'DN83267769' AND SP.GIA > 10000 AND CN.MADN = DN.MADN AND SP.MA_SP = CNSP.MA_SP
+	SELECT  DISTINCT SP.MA_SP, SP.TEN_SP, SP.SO_LUONG, SP.GIA
+	from SAN_PHAM SP, DOANH_NGHIEP DN, CHI_NHANH CN, CHINHANH_SANPHAM CNSP 
+	WHERE DN.MADN = N'DN83267769' AND SP.GIA > 10000 AND CN.MADN = DN.MADN AND SP.MA_SP = CNSP.MA_SP
 COMMIT TRAN
