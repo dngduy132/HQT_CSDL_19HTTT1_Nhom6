@@ -62,11 +62,12 @@ namespace HeThongVanChuyenHangOnl.DoanhNghiep
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(52, 9);
+            this.label2.Location = new System.Drawing.Point(94, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(678, 37);
+            this.label2.Size = new System.Drawing.Size(596, 37);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Xem danh sách đơn đặt hàng của doanh nghiệp";
+            this.label2.Text = "Thống kê đơn đặt hàng của doanh nghiệp";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // dataGridView1
             // 

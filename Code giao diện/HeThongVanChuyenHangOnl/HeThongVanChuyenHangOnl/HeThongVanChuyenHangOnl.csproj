@@ -94,6 +94,18 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="NhanVien\NV_CapNhatThongTinDoanhNghiep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanVien\NV_CapNhatThongTinDoanhNghiep.Designer.cs">
+      <DependentUpon>NV_CapNhatThongTinDoanhNghiep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhanVien\NV_CapNhatThongTinHopDong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanVien\NV_CapNhatThongTinHopDong.Designer.cs">
+      <DependentUpon>NV_CapNhatThongTinHopDong.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuanTri\QT_CapNhatThongTinDoanhNghiep.cs">
@@ -155,6 +167,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanVien\NV_CapNhatThongTinDoanhNghiep.resx">
+      <DependentUpon>NV_CapNhatThongTinDoanhNghiep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanVien\NV_CapNhatThongTinHopDong.resx">
+      <DependentUpon>NV_CapNhatThongTinHopDong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

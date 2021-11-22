@@ -126,6 +126,20 @@ namespace HeThongVanChuyenHangOnl
             frm.Show();
         }
 
-      
+        private void ChinhSuaThongTinDoanhNghiep_Click(object sender, EventArgs e)
+        {
+            NhanVien.NV_CapNhatThongTinDoanhNghiep frm = new NhanVien.NV_CapNhatThongTinDoanhNghiep();
+            frm.MdiParent = this;
+            frm.Name = "NV_CapNhatThongTinDoanhNghiep";
+            frm.Show();
+        }
+
+        private void ChinhSuaThongTinHoaDon_Click(object sender, EventArgs e)
+        {
+            NhanVien.NV_CapNhatThongTinHopDong frm = new NhanVien.NV_CapNhatThongTinHopDong();
+            frm.MdiParent = this;
+            frm.Name = "NV_CapNhatThongTinHopDong";
+            frm.Show();
+        }
     }
 }
