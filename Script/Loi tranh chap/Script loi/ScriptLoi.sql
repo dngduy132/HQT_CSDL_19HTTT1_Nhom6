@@ -29,6 +29,43 @@ BEGIN TRAN
 	SELECT SO_LUONG FROM dbo.SAN_PHAM WITH(NOLOCK) WHERE MA_SP = 'SP26049509'
 COMMIT TRAN
 
+--UNREPEATABLE READ
+--T1 : Khách hàng tìm xem có tồn tại sản phẩm có mã là SP26049509 và tên là Ly uống nước
+--T2 : Doanh nghiệp đổi tên sản phẩm có mã là SP26049509
+--T1
+BEGIN TRANSACTION
+	SELECT COUNT(MA_SP) FROM dbo.SAN_PHAM WHERE MA_SP = 'SP26049509' AND TEN_SP = N'Ly uống nước'
+	WAITFOR DELAY '00:00:5'
+	SELECT * FROM SAN_PHAM WHERE MA_SP = 'SP26049509' AND TEN_SP = N'Ly uống nước'
+COMMIT TRANSACTION
+--T2
+BEGIN TRANSACTION
+	UPDATE dbo.SAN_PHAM
+	SET TEN_SP = N'Ly uống trà'
+	WHERE MA_SP = 'SP26049509'
+COMMIT TRANSACTION
+
+
+--T1 : Khách hàng tìm xem có tồn tại doanh nghiệp có tên Trupebistor Direct ở Quận Tân Bình
+--và truy xuất thông tin doanh nghiệp 
+--T2 : Quản trị đổi quận của doanh nghiệp 
+--T1
+BEGIN TRAN
+	SELECT COUNT(MADN)
+	FROM dbo.DOANH_NGHIEP
+	WHERE TEN_DN = 'Trupebistor Direct' AND QUAN = N'Quận Tân Bình'
+	WAITFOR DELAY '00:00:05'
+	SELECT * 
+	FROM dbo.DOANH_NGHIEP
+	WHERE TEN_DN = 'Trupebistor Direct' AND QUAN = N'Quận Tân Bình'
+COMMIT TRAN
+
+--T2
+BEGIN TRAN
+	UPDATE dbo.DOANH_NGHIEP
+	SET QUAN = N'Quận 5'
+	WHERE TEN_DN = 'Trupebistor Direct' AND QUAN = N'Quận Tân Bình'
+COMMIT TRAN
 
 
 
