@@ -1,6 +1,6 @@
 ﻿--DIRTY READ
 
-
+--Case 1
 -- T1: Doanh nghiệp cập nhật giá sản phẩm có mã là SP26049509
 -- T2: Khách hàng xem giá sản phẩm có mã là SP26049509
 -- Doanh nghiệp cập nhật giá nhưng không commit => Khách hàng đọc dữ liệu rác
@@ -15,7 +15,7 @@ BEGIN TRAN
 	SELECT GIA FROM dbo.SAN_PHAM WITH(NOLOCK) WHERE MA_SP = 'SP26049509'
 COMMIT TRAN
 
-
+--Case 2
 -- T1: Doanh nghiệp cập nhật số lượng sản phẩm có mã là SP26049509
 -- T2: Khách hàng xem số lượng sản phẩm có mã là SP26049509
 -- Doanh nghiệp cập nhật số lượng nhưng không commit => Khách hàng đọc dữ liệu rác
@@ -30,6 +30,7 @@ BEGIN TRAN
 COMMIT TRAN
 
 --UNREPEATABLE READ
+--Case 1
 --T1 : Khách hàng tìm xem có tồn tại sản phẩm có mã là SP26049509 và tên là Ly uống nước
 --T2 : Doanh nghiệp đổi tên sản phẩm có mã là SP26049509
 --T1
@@ -45,7 +46,7 @@ BEGIN TRANSACTION
 	WHERE MA_SP = 'SP26049509'
 COMMIT TRANSACTION
 
-
+--Case 2
 --T1 : Khách hàng tìm xem có tồn tại doanh nghiệp có tên Trupebistor Direct ở Quận Tân Bình
 --và truy xuất thông tin doanh nghiệp 
 --T2 : Quản trị đổi quận của doanh nghiệp 
@@ -71,7 +72,7 @@ COMMIT TRAN
 
 --LOST UPDATE
 
-
+--Case 1
 -- T1: Khách hàng 1 xác nhận mua sản phẩm có mã SP26049509
 -- T2: Khách hàng 2 xác nhận mua sản phẩm có mã SP26049509
 -- Số lượng sản phẩm hiện tại là 1
@@ -106,7 +107,7 @@ BEGIN TRAN
 	END 
 COMMIT TRAN
 
-
+--Case 2
 -- T1: Tài xế 1 (TX11736641) xác nhận giao hóa đơn có mã hóa đơn  HD56451566
 -- T2: Tài xế 2 (TX23114712) đồng thời xác nhận giao hóa đơn có mã hóa đơn  HD56451566
 -- Số lượng tài xế tối đa của 1 hóa đơn là 1
@@ -139,8 +140,8 @@ BEGIN TRAN
 COMMIT TRAN
 
 
-PHANTOM:
-
+--PHANTOM:
+--Case 1
 --T1: Khách hàng xem số lượng các sản phẩm có số lượng = 10 của doanh nghiệp có mã 'DN83267769'
 --T2: Doanh nghiệp thêm sản phẩm có số lượng = 10
 --Khách hàng xem số lượng các sản phẩm có số lượng = 10 của doanh nghiệp có mã 'DN83267769' lần 1 có 3 sản phẩm
@@ -169,7 +170,7 @@ BEGIN TRAN
 COMMIT TRAN
 
 
-
+--Case 2
 --T1: Doanh nghiệp 'DN71715083' xem số lượng đơn hàng của mình.
 --T2: Thêm đơn đặt hàng mới.
 --Doanh nghiệp xem số lượng đơn hàng lần 1 là 1
@@ -201,7 +202,7 @@ BEGIN TRAN
 COMMIT TRAN
 
 
-
+--Case 3
 --T1: Khách hàng xem số lượng sản phẩm có giá > 10000 của doanh nghiệp
 --T2: Doanh nghiệp cập nhật giá sản phẩm.
 --Khách hàng xem số lượng các sản phẩm có giá > 10000 lần 1 là 21.
@@ -226,4 +227,36 @@ COMMIT TRAN
 --T2
 BEGIN TRAN
 	UPDATE SAN_PHAM SET GIA = 1000 WHERE MA_SP = N'SP26049509';
+COMMIT TRAN
+
+--Circle Deadlock 
+--T1: Nhân viên 1 cập nhật thông tin người đại diện trong bảng doanh nghiệp trước 
+--rồi cập nhật bảng hợp đồng sau  
+--T2: Nhân viên 2 cập nhật thông tin người đại diện trong bảng hợp đồng trước 
+--rồi cập nhật bảng doanh nghiệp sau 
+
+-- T1
+BEGIN TRAN
+	UPDATE dbo.DOANH_NGHIEP 
+	SET NGUOI_DAI_DIEN = N'Nguyễn Văn A' 
+	WHERE MADN = 'DN61092796 '
+
+	WAITFOR	DELAY '00:00:05'
+
+	UPDATE dbo.HOP_DONG
+	SET NGUOI_DAI_DIEN = N'Nguyễn Văn A' 
+	WHERE MADN = 'DN61092796 '
+COMMIT TRAN
+
+--T2
+BEGIN TRAN
+	UPDATE dbo.HOP_DONG
+	SET NGUOI_DAI_DIEN = N'Nguyễn Văn A' 
+	WHERE MADN = 'DN61092796 '
+	
+	WAITFOR	DELAY '00:00:05'
+
+	UPDATE dbo.DOANH_NGHIEP 
+	SET NGUOI_DAI_DIEN = N'Nguyễn Văn A' 
+	WHERE MADN = 'DN61092796 '
 COMMIT TRAN
