@@ -224,7 +224,7 @@ namespace HeThongVanChuyenHangOnl
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Main";
             this.Text = "Hệ thống vận chuyển hàng onl";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.Main_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

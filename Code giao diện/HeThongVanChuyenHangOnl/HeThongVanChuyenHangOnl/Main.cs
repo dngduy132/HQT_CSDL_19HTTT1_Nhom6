@@ -16,11 +16,6 @@ namespace HeThongVanChuyenHangOnl
         {
             InitializeComponent();
         }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }  
         
         private void XemThongTinSanPham_Click(object sender, EventArgs e)
         {
@@ -132,6 +127,11 @@ namespace HeThongVanChuyenHangOnl
             frm.MdiParent = this;
             frm.Name = "NV_CapNhatThongTinHopDong";
             frm.Show();
+        }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+            function.Connect();
         }
     }
 }

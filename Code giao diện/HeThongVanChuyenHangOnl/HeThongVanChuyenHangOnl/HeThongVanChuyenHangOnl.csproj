@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="conect_data.cs" />
     <Compile Include="DoanhNghiep\DN_CapNhatThongTinSanPham.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +65,7 @@
     <Compile Include="DoanhNghiep\DN_XemDanhSachDonDatHang.Designer.cs">
       <DependentUpon>DN_XemDanhSachDonDatHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="function.cs" />
     <Compile Include="KhachHang\KH_MuaHang.cs">
       <SubType>Form</SubType>
     </Compile>
