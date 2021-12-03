@@ -25,7 +25,7 @@ namespace HeThongVanChuyenHangOnl.DoanhNghiep
 
         private void loadData()
         {
-            dataGridViewDonHang.DataSource = GetAllDonDatHang().Tables[0];
+            dataGridViewDonHang.DataSource = GetAllDonDatHang().Tables[1];
         }
         private void DN_XemDanhSachDonDatHang_Load(object sender, EventArgs e)
         {
@@ -36,7 +36,7 @@ namespace HeThongVanChuyenHangOnl.DoanhNghiep
         DataSet GetAllDonDatHang()
         {
             DataSet data = new DataSet();
-            string query = "Select * from DON_DAT_HANG WHERE MADN =N'" + comboBoxMaDN.SelectedValue + "'";
+            string query = "DN_TKE_DON_DAT_HANG N'" + comboBoxMaDN.SelectedValue + "'";
             using (SqlConnection connection = new SqlConnection(conect_data.connectionString))
             {
                 connection.Open();
@@ -55,7 +55,7 @@ namespace HeThongVanChuyenHangOnl.DoanhNghiep
         private void Enter_btn_Click(object sender, EventArgs e)
         {
             string query;
-            query = "SELECT MADN FROM DOANH_NGHIEP WHERE MADN = N'" + comboBoxMaDN.SelectedValue + "'";
+            query = "DN_TKE_DON_DAT_HANG N'" + comboBoxMaDN.SelectedValue + "'";
             if (comboBoxMaDN.Text.Trim().Length == 0)
             {
                 MessageBox.Show("Bạn phải chọn mã doanh nghiệp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -64,7 +64,9 @@ namespace HeThongVanChuyenHangOnl.DoanhNghiep
             }
             function.RunSQL(query);
             loadData();
+            slDonDatHang_tb.Text = GetAllDonDatHang().Tables[0].Rows[0][0].ToString();
         }
+
     }
 }
 

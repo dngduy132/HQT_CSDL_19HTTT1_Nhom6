@@ -36,6 +36,7 @@ namespace HeThongVanChuyenHangOnl.DoanhNghiep
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.Enter_btn = new System.Windows.Forms.Button();
+            this.slDonDatHang_tb = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDonHang)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -91,11 +92,11 @@ namespace HeThongVanChuyenHangOnl.DoanhNghiep
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(624, 79);
+            this.label3.Location = new System.Drawing.Point(592, 79);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 17);
+            this.label3.Size = new System.Drawing.Size(132, 17);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Kết quả";
+            this.label3.Text = "Số lượng đơn hàng:";
             // 
             // Enter_btn
             // 
@@ -107,11 +108,19 @@ namespace HeThongVanChuyenHangOnl.DoanhNghiep
             this.Enter_btn.UseVisualStyleBackColor = true;
             this.Enter_btn.Click += new System.EventHandler(this.Enter_btn_Click);
             // 
+            // slDonDatHang_tb
+            // 
+            this.slDonDatHang_tb.Location = new System.Drawing.Point(730, 76);
+            this.slDonDatHang_tb.Name = "slDonDatHang_tb";
+            this.slDonDatHang_tb.Size = new System.Drawing.Size(56, 22);
+            this.slDonDatHang_tb.TabIndex = 7;
+            // 
             // DN_XemDanhSachDonDatHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(847, 494);
+            this.Controls.Add(this.slDonDatHang_tb);
             this.Controls.Add(this.Enter_btn);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
@@ -138,5 +147,6 @@ namespace HeThongVanChuyenHangOnl.DoanhNghiep
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button Enter_btn;
+        private System.Windows.Forms.TextBox slDonDatHang_tb;
     }
 }

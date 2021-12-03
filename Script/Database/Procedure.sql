@@ -210,11 +210,11 @@ AS
 	WHERE DN.MADN = @MADN
 
 	-- Hiển thị thông tin hóa đơn của doanh nghiệp
-	SELECT COUNT(HD.MA_DON) 
-	FROM dbo.DOANH_NGHIEP DN JOIN dbo.DON_DAT_HANG HD ON (HD.MADN = DN.MADN)
-	WHERE DN.MADN = @MADN
 	SELECT * FROM DON_DAT_HANG WHERE MADN = @MADN
 GO 
+
+
+exec DN_TKE_DON_DAT_HANG DN63541170
 
  --Chức năng cập nhật giá tiền sản phẩm 
  CREATE OR ALTER PROCEDURE CAPNHAP_TTIN_SP
