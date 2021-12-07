@@ -34,15 +34,16 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.comBoxMaDN = new System.Windows.Forms.ComboBox();
+            this.textSoLuongSP = new System.Windows.Forms.TextBox();
+            this.textGiaSP = new System.Windows.Forms.TextBox();
+            this.btnTKSoLuong = new System.Windows.Forms.Button();
+            this.dataGridViewTKSP = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textKetQua = new System.Windows.Forms.TextBox();
+            this.btnTKGia = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTKSP)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -92,75 +93,87 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             this.label4.TabIndex = 3;
             this.label4.Text = "Giá sản phẩm";
             // 
-            // comboBox1
+            // comBoxMaDN
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(206, 65);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 4;
+            this.comBoxMaDN.FormattingEnabled = true;
+            this.comBoxMaDN.Location = new System.Drawing.Point(206, 65);
+            this.comBoxMaDN.Name = "comBoxMaDN";
+            this.comBoxMaDN.Size = new System.Drawing.Size(121, 24);
+            this.comBoxMaDN.TabIndex = 4;
             // 
-            // textBox1
+            // textSoLuongSP
             // 
-            this.textBox1.Location = new System.Drawing.Point(206, 103);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 22);
-            this.textBox1.TabIndex = 5;
+            this.textSoLuongSP.Location = new System.Drawing.Point(206, 103);
+            this.textSoLuongSP.Name = "textSoLuongSP";
+            this.textSoLuongSP.Size = new System.Drawing.Size(121, 22);
+            this.textSoLuongSP.TabIndex = 5;
             // 
-            // textBox2
+            // textGiaSP
             // 
-            this.textBox2.Location = new System.Drawing.Point(206, 145);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(121, 22);
-            this.textBox2.TabIndex = 6;
+            this.textGiaSP.Location = new System.Drawing.Point(206, 145);
+            this.textGiaSP.Name = "textGiaSP";
+            this.textGiaSP.Size = new System.Drawing.Size(121, 22);
+            this.textGiaSP.TabIndex = 6;
             // 
-            // button1
+            // btnTKSoLuong
             // 
-            this.button1.Location = new System.Drawing.Point(582, 65);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(99, 33);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Thống kê";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnTKSoLuong.Location = new System.Drawing.Point(415, 65);
+            this.btnTKSoLuong.Name = "btnTKSoLuong";
+            this.btnTKSoLuong.Size = new System.Drawing.Size(200, 32);
+            this.btnTKSoLuong.TabIndex = 7;
+            this.btnTKSoLuong.Text = "Thống kê theo số lượng";
+            this.btnTKSoLuong.UseVisualStyleBackColor = true;
+            this.btnTKSoLuong.Click += new System.EventHandler(this.btnTKSoLuong_Click);
             // 
-            // dataGridView1
+            // dataGridViewTKSP
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(27, 189);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(749, 249);
-            this.dataGridView1.TabIndex = 8;
+            this.dataGridViewTKSP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewTKSP.Location = new System.Drawing.Point(27, 189);
+            this.dataGridViewTKSP.Name = "dataGridViewTKSP";
+            this.dataGridViewTKSP.RowHeadersWidth = 51;
+            this.dataGridViewTKSP.RowTemplate.Height = 24;
+            this.dataGridViewTKSP.Size = new System.Drawing.Size(749, 249);
+            this.dataGridViewTKSP.TabIndex = 8;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(488, 120);
+            this.label5.Location = new System.Drawing.Point(412, 153);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(57, 17);
             this.label5.TabIndex = 9;
             this.label5.Text = "Kết quả";
             // 
-            // textBox3
+            // textKetQua
             // 
-            this.textBox3.Location = new System.Drawing.Point(573, 120);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(121, 22);
-            this.textBox3.TabIndex = 10;
+            this.textKetQua.Location = new System.Drawing.Point(494, 150);
+            this.textKetQua.Name = "textKetQua";
+            this.textKetQua.Size = new System.Drawing.Size(121, 22);
+            this.textKetQua.TabIndex = 10;
+            // 
+            // btnTKGia
+            // 
+            this.btnTKGia.Location = new System.Drawing.Point(415, 112);
+            this.btnTKGia.Name = "btnTKGia";
+            this.btnTKGia.Size = new System.Drawing.Size(200, 32);
+            this.btnTKGia.TabIndex = 11;
+            this.btnTKGia.Text = "Thống kê theo giá";
+            this.btnTKGia.UseVisualStyleBackColor = true;
+            this.btnTKGia.Click += new System.EventHandler(this.btnTKGia_Click);
             // 
             // KH_ThongKeSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.btnTKGia);
+            this.Controls.Add(this.textKetQua);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.dataGridViewTKSP);
+            this.Controls.Add(this.btnTKSoLuong);
+            this.Controls.Add(this.textGiaSP);
+            this.Controls.Add(this.textSoLuongSP);
+            this.Controls.Add(this.comBoxMaDN);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -170,7 +183,7 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             this.Load += new System.EventHandler(this.KH_ThongKeSanPham_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTKSP)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -183,12 +196,13 @@ namespace HeThongVanChuyenHangOnl.KhachHang
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ComboBox comBoxMaDN;
+        private System.Windows.Forms.TextBox textSoLuongSP;
+        private System.Windows.Forms.TextBox textGiaSP;
+        private System.Windows.Forms.Button btnTKSoLuong;
+        private System.Windows.Forms.DataGridView dataGridViewTKSP;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textKetQua;
+        private System.Windows.Forms.Button btnTKGia;
     }
 }

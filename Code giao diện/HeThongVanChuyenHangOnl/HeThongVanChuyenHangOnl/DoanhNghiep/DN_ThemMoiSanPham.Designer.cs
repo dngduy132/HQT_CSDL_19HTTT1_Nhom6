@@ -50,7 +50,7 @@ namespace HeThongVanChuyenHangOnl.DoanhNghiep
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(45, 78);
+            this.label1.Location = new System.Drawing.Point(45, 124);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(118, 17);
             this.label1.TabIndex = 0;
@@ -59,7 +59,7 @@ namespace HeThongVanChuyenHangOnl.DoanhNghiep
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(45, 129);
+            this.label2.Location = new System.Drawing.Point(45, 75);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(93, 17);
             this.label2.TabIndex = 1;
@@ -68,7 +68,7 @@ namespace HeThongVanChuyenHangOnl.DoanhNghiep
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(487, 124);
+            this.label3.Location = new System.Drawing.Point(487, 75);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(99, 17);
             this.label3.TabIndex = 2;
@@ -77,7 +77,7 @@ namespace HeThongVanChuyenHangOnl.DoanhNghiep
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(45, 177);
+            this.label4.Location = new System.Drawing.Point(487, 124);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(30, 17);
             this.label4.TabIndex = 3;
@@ -95,7 +95,7 @@ namespace HeThongVanChuyenHangOnl.DoanhNghiep
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(45, 226);
+            this.label6.Location = new System.Drawing.Point(487, 224);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(43, 17);
             this.label6.TabIndex = 5;
@@ -103,7 +103,7 @@ namespace HeThongVanChuyenHangOnl.DoanhNghiep
             // 
             // textMaSP
             // 
-            this.textMaSP.Location = new System.Drawing.Point(211, 124);
+            this.textMaSP.Location = new System.Drawing.Point(211, 70);
             this.textMaSP.Name = "textMaSP";
             this.textMaSP.Size = new System.Drawing.Size(144, 22);
             this.textMaSP.TabIndex = 6;
@@ -111,7 +111,7 @@ namespace HeThongVanChuyenHangOnl.DoanhNghiep
             // comBoxMaDN
             // 
             this.comBoxMaDN.FormattingEnabled = true;
-            this.comBoxMaDN.Location = new System.Drawing.Point(211, 78);
+            this.comBoxMaDN.Location = new System.Drawing.Point(211, 117);
             this.comBoxMaDN.Name = "comBoxMaDN";
             this.comBoxMaDN.Size = new System.Drawing.Size(144, 24);
             this.comBoxMaDN.TabIndex = 7;
@@ -119,14 +119,14 @@ namespace HeThongVanChuyenHangOnl.DoanhNghiep
             // 
             // textTenSP
             // 
-            this.textTenSP.Location = new System.Drawing.Point(634, 119);
+            this.textTenSP.Location = new System.Drawing.Point(634, 75);
             this.textTenSP.Name = "textTenSP";
             this.textTenSP.Size = new System.Drawing.Size(144, 22);
             this.textTenSP.TabIndex = 8;
             // 
             // textGiaSP
             // 
-            this.textGiaSP.Location = new System.Drawing.Point(211, 172);
+            this.textGiaSP.Location = new System.Drawing.Point(634, 119);
             this.textGiaSP.Name = "textGiaSP";
             this.textGiaSP.Size = new System.Drawing.Size(144, 22);
             this.textGiaSP.TabIndex = 9;
@@ -140,14 +140,14 @@ namespace HeThongVanChuyenHangOnl.DoanhNghiep
             // 
             // textMoTa
             // 
-            this.textMoTa.Location = new System.Drawing.Point(214, 221);
+            this.textMoTa.Location = new System.Drawing.Point(634, 219);
             this.textMoTa.Name = "textMoTa";
             this.textMoTa.Size = new System.Drawing.Size(144, 22);
             this.textMoTa.TabIndex = 11;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(634, 209);
+            this.button1.Location = new System.Drawing.Point(634, 315);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(144, 34);
             this.button1.TabIndex = 12;
@@ -168,7 +168,7 @@ namespace HeThongVanChuyenHangOnl.DoanhNghiep
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(487, 78);
+            this.label8.Location = new System.Drawing.Point(45, 172);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(93, 17);
             this.label8.TabIndex = 14;
@@ -177,7 +177,7 @@ namespace HeThongVanChuyenHangOnl.DoanhNghiep
             // comBoxMaCN
             // 
             this.comBoxMaCN.FormattingEnabled = true;
-            this.comBoxMaCN.Location = new System.Drawing.Point(634, 75);
+            this.comBoxMaCN.Location = new System.Drawing.Point(211, 172);
             this.comBoxMaCN.Name = "comBoxMaCN";
             this.comBoxMaCN.Size = new System.Drawing.Size(144, 24);
             this.comBoxMaCN.TabIndex = 15;

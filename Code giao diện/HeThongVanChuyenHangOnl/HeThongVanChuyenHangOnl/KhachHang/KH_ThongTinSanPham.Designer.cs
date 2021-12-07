@@ -30,12 +30,12 @@ namespace HeThongVanChuyenHangOnl.KhachHang
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.comBoxMaDN = new System.Windows.Forms.ComboBox();
+            this.dataGridViewThongTinSP = new System.Windows.Forms.DataGridView();
             this.btn_Enter = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewThongTinSP)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,28 +44,29 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(13, 74);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(156, 17);
+            this.label1.Size = new System.Drawing.Size(118, 17);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Chọn tên doanh nghiệp";
+            this.label1.Text = "Mã doanh nghiệp";
             // 
-            // comboBox1
+            // comBoxMaDN
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(175, 71);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(318, 24);
-            this.comboBox1.TabIndex = 1;
+            this.comBoxMaDN.FormattingEnabled = true;
+            this.comBoxMaDN.Location = new System.Drawing.Point(175, 71);
+            this.comBoxMaDN.Name = "comBoxMaDN";
+            this.comBoxMaDN.Size = new System.Drawing.Size(318, 24);
+            this.comBoxMaDN.TabIndex = 1;
+            this.comBoxMaDN.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // dataGridView1
+            // dataGridViewThongTinSP
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 123);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(772, 315);
-            this.dataGridView1.TabIndex = 2;
+            this.dataGridViewThongTinSP.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dataGridViewThongTinSP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewThongTinSP.Location = new System.Drawing.Point(16, 123);
+            this.dataGridViewThongTinSP.Name = "dataGridViewThongTinSP";
+            this.dataGridViewThongTinSP.RowHeadersWidth = 51;
+            this.dataGridViewThongTinSP.RowTemplate.Height = 24;
+            this.dataGridViewThongTinSP.Size = new System.Drawing.Size(772, 315);
+            this.dataGridViewThongTinSP.TabIndex = 2;
             // 
             // btn_Enter
             // 
@@ -75,7 +76,7 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             this.btn_Enter.TabIndex = 3;
             this.btn_Enter.Text = "Enter";
             this.btn_Enter.UseVisualStyleBackColor = true;
-            this.btn_Enter.Click += new System.EventHandler(this.button1_Click);
+            this.btn_Enter.Click += new System.EventHandler(this.btnEnter_Click);
             // 
             // panel1
             // 
@@ -103,13 +104,13 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btn_Enter);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.dataGridViewThongTinSP);
+            this.Controls.Add(this.comBoxMaDN);
             this.Controls.Add(this.label1);
             this.Name = "KH_ThongTinSanPham";
             this.Text = "KH_ThongTinSanPham";
             this.Load += new System.EventHandler(this.KH_ThongTinSanPham_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewThongTinSP)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -120,8 +121,8 @@ namespace HeThongVanChuyenHangOnl.KhachHang
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ComboBox comBoxMaDN;
+        private System.Windows.Forms.DataGridView dataGridViewThongTinSP;
         private System.Windows.Forms.Button btn_Enter;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;

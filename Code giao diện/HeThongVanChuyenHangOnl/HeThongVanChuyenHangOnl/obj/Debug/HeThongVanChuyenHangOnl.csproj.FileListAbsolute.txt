@@ -18,7 +18,6 @@ D:\HTTT\HQT_CSDL_19HTTT1_Nhom6\Code giao diện\HeThongVanChuyenHangOnl\HeThongV
 D:\HTTT\HQT_CSDL_19HTTT1_Nhom6\Code giao diện\HeThongVanChuyenHangOnl\HeThongVanChuyenHangOnl\obj\Debug\HeThongVanChuyenHangOnl.DoanhNghiep.DN_CapNhatThongTinSanPham.resources
 D:\HTTT\HQT_CSDL_19HTTT1_Nhom6\Code giao diện\HeThongVanChuyenHangOnl\HeThongVanChuyenHangOnl\obj\Debug\HeThongVanChuyenHangOnl.DoanhNghiep.DN_ThemMoiSanPham.resources
 D:\HTTT\HQT_CSDL_19HTTT1_Nhom6\Code giao diện\HeThongVanChuyenHangOnl\HeThongVanChuyenHangOnl\obj\Debug\HeThongVanChuyenHangOnl.DoanhNghiep.DN_XemDanhSachDonDatHang.resources
-D:\HTTT\HQT_CSDL_19HTTT1_Nhom6\Code giao diện\HeThongVanChuyenHangOnl\HeThongVanChuyenHangOnl\obj\Debug\HeThongVanChuyenHangOnl.DoanhNghiep.DN_XemDanhSachSanPham.resources
 D:\HTTT\HQT_CSDL_19HTTT1_Nhom6\Code giao diện\HeThongVanChuyenHangOnl\HeThongVanChuyenHangOnl\obj\Debug\HeThongVanChuyenHangOnl.KhachHang.KH_MuaHang.resources
 D:\HTTT\HQT_CSDL_19HTTT1_Nhom6\Code giao diện\HeThongVanChuyenHangOnl\HeThongVanChuyenHangOnl\obj\Debug\HeThongVanChuyenHangOnl.KhachHang.KH_TimKiemSanPham.resources
 D:\HTTT\HQT_CSDL_19HTTT1_Nhom6\Code giao diện\HeThongVanChuyenHangOnl\HeThongVanChuyenHangOnl\obj\Debug\HeThongVanChuyenHangOnl.Main.resources
@@ -58,3 +57,5 @@ D:\Github\HQT_CSDL_19HTTT1_Nhom6\Code giao diện\HeThongVanChuyenHangOnl\HeThon
 D:\Github\HQT_CSDL_19HTTT1_Nhom6\Code giao diện\HeThongVanChuyenHangOnl\HeThongVanChuyenHangOnl\obj\Debug\HeThongVanChuyenHangOnl.pdb
 D:\Github\HQT_CSDL_19HTTT1_Nhom6\Code giao diện\HeThongVanChuyenHangOnl\HeThongVanChuyenHangOnl\obj\Debug\HeThongVanChuyenHangOnl.NhanVien.NV_CapNhatThongTinDoanhNghiep.resources
 D:\Github\HQT_CSDL_19HTTT1_Nhom6\Code giao diện\HeThongVanChuyenHangOnl\HeThongVanChuyenHangOnl\obj\Debug\HeThongVanChuyenHangOnl.NhanVien.NV_CapNhatThongTinHopDong.resources
+D:\HTTT\HQT_CSDL_19HTTT1_Nhom6\Code giao diện\HeThongVanChuyenHangOnl\HeThongVanChuyenHangOnl\obj\Debug\HeThongVanChuyenHangOnl.NhanVien.NV_CapNhatThongTinDoanhNghiep.resources
+D:\HTTT\HQT_CSDL_19HTTT1_Nhom6\Code giao diện\HeThongVanChuyenHangOnl\HeThongVanChuyenHangOnl\obj\Debug\HeThongVanChuyenHangOnl.NhanVien.NV_CapNhatThongTinHopDong.resources

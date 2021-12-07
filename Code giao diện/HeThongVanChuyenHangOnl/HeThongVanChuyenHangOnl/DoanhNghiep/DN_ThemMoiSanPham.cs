@@ -94,7 +94,7 @@ namespace HeThongVanChuyenHangOnl.DoanhNghiep
                 textMoTa.Focus();
                 return;
             }
-            query = "THEM_SP N'" + textMaSP.Text + "', N'" + textTenSP.Text + "', N'" + textGiaSP.Text + "', N'" + textSoLuong.Text + "', N'" + textMoTa.Text + "'";
+            query = "THEM_SP N'" + comBoxMaCN.SelectedValue + "', N'" + textMaSP.Text + "', N'" + textTenSP.Text + "', N'" + textGiaSP.Text + "', N'" + textSoLuong.Text + "', N'" + textMoTa.Text + "'";
 
             function.RunSQL(query);
             MessageBox.Show("Bạn đã thêm thành công sản phẩm ^.^", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);

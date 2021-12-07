@@ -30,27 +30,26 @@ namespace HeThongVanChuyenHangOnl.KhachHang
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
+            this.dataGridMuaSP = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comBoxHTTT = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comBoxMaKH = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comBoxKV = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnDatHang = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textSoLuong = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.label9 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.comBoxMaDN = new System.Windows.Forms.ComboBox();
+            this.comBoxMaSP = new System.Windows.Forms.ComboBox();
+            this.bntXemSP = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textTongTien = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridMuaSP)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -64,25 +63,15 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             this.label1.Text = "Mua sản phẩm";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // dataGridView1
+            // dataGridMuaSP
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(27, 247);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(742, 191);
-            this.dataGridView1.TabIndex = 1;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(257, 134);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(123, 31);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Chọn sản phẩm";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.dataGridMuaSP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridMuaSP.Location = new System.Drawing.Point(27, 247);
+            this.dataGridMuaSP.Name = "dataGridMuaSP";
+            this.dataGridMuaSP.RowHeadersWidth = 51;
+            this.dataGridMuaSP.RowTemplate.Height = 24;
+            this.dataGridMuaSP.Size = new System.Drawing.Size(742, 191);
+            this.dataGridMuaSP.TabIndex = 1;
             // 
             // label2
             // 
@@ -94,14 +83,14 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             this.label2.Text = "Hình thức thanh toán";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // comboBox1
+            // comBoxHTTT
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(407, 65);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 4;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.comBoxHTTT.FormattingEnabled = true;
+            this.comBoxHTTT.Location = new System.Drawing.Point(407, 65);
+            this.comBoxHTTT.Name = "comBoxHTTT";
+            this.comBoxHTTT.Size = new System.Drawing.Size(121, 24);
+            this.comBoxHTTT.TabIndex = 4;
+            this.comBoxHTTT.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -113,13 +102,6 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             this.label3.Text = "Mã DNghiệp";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(119, 107);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 22);
-            this.textBox1.TabIndex = 6;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -130,13 +112,13 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             this.label4.Text = "Mã khách hàng";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // comboBox2
+            // comBoxMaKH
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(119, 65);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 24);
-            this.comboBox2.TabIndex = 8;
+            this.comBoxMaKH.FormattingEnabled = true;
+            this.comBoxMaKH.Location = new System.Drawing.Point(119, 65);
+            this.comBoxMaKH.Name = "comBoxMaKH";
+            this.comBoxMaKH.Size = new System.Drawing.Size(121, 24);
+            this.comBoxMaKH.TabIndex = 8;
             // 
             // label5
             // 
@@ -148,14 +130,14 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             this.label5.Text = "Tên khu vực";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // comboBox3
+            // comBoxKV
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(646, 65);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 24);
-            this.comboBox3.TabIndex = 10;
-            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
+            this.comBoxKV.FormattingEnabled = true;
+            this.comBoxKV.Location = new System.Drawing.Point(646, 65);
+            this.comBoxKV.Name = "comBoxKV";
+            this.comBoxKV.Size = new System.Drawing.Size(121, 24);
+            this.comBoxKV.TabIndex = 10;
+            this.comBoxKV.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
             // panel1
             // 
@@ -166,97 +148,114 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             this.panel1.Size = new System.Drawing.Size(800, 50);
             this.panel1.TabIndex = 11;
             // 
-            // button2
+            // btnDatHang
             // 
-            this.button2.Location = new System.Drawing.Point(257, 176);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(123, 29);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "Đặt hàng";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnDatHang.Location = new System.Drawing.Point(257, 188);
+            this.btnDatHang.Name = "btnDatHang";
+            this.btnDatHang.Size = new System.Drawing.Size(123, 29);
+            this.btnDatHang.TabIndex = 12;
+            this.btnDatHang.Text = "Đặt hàng";
+            this.btnDatHang.UseVisualStyleBackColor = true;
+            this.btnDatHang.Click += new System.EventHandler(this.btnDatHang_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(8, 148);
+            this.label7.Location = new System.Drawing.Point(8, 151);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(93, 17);
             this.label7.TabIndex = 14;
             this.label7.Text = "Mã sản phẩm";
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
-            // textBox2
+            // textSoLuong
             // 
-            this.textBox2.Location = new System.Drawing.Point(119, 151);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(121, 22);
-            this.textBox2.TabIndex = 15;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(119, 191);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(121, 22);
-            this.textBox3.TabIndex = 17;
+            this.textSoLuong.Location = new System.Drawing.Point(119, 194);
+            this.textSoLuong.Name = "textSoLuong";
+            this.textSoLuong.Size = new System.Drawing.Size(121, 22);
+            this.textSoLuong.TabIndex = 17;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(8, 188);
+            this.label8.Location = new System.Drawing.Point(12, 194);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(64, 17);
             this.label8.TabIndex = 16;
             this.label8.Text = "Số lượng";
             // 
-            // dataGridView2
+            // comBoxMaDN
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(440, 134);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(327, 95);
-            this.dataGridView2.TabIndex = 18;
+            this.comBoxMaDN.FormattingEnabled = true;
+            this.comBoxMaDN.Location = new System.Drawing.Point(119, 105);
+            this.comBoxMaDN.Name = "comBoxMaDN";
+            this.comBoxMaDN.Size = new System.Drawing.Size(121, 24);
+            this.comBoxMaDN.TabIndex = 19;
+            this.comBoxMaDN.SelectedIndexChanged += new System.EventHandler(this.comBoxMaDN_SelectedIndexChanged);
             // 
-            // label9
+            // comBoxMaSP
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(436, 108);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(160, 23);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "Sản phẩm đã chọn";
+            this.comBoxMaSP.FormattingEnabled = true;
+            this.comBoxMaSP.Location = new System.Drawing.Point(119, 148);
+            this.comBoxMaSP.Name = "comBoxMaSP";
+            this.comBoxMaSP.Size = new System.Drawing.Size(121, 24);
+            this.comBoxMaSP.TabIndex = 20;
+            // 
+            // bntXemSP
+            // 
+            this.bntXemSP.Location = new System.Drawing.Point(291, 107);
+            this.bntXemSP.Name = "bntXemSP";
+            this.bntXemSP.Size = new System.Drawing.Size(123, 31);
+            this.bntXemSP.TabIndex = 21;
+            this.bntXemSP.Text = "Xem sản phẩm";
+            this.bntXemSP.UseVisualStyleBackColor = true;
+            this.bntXemSP.Click += new System.EventHandler(this.bntXemSP_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(460, 200);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(68, 17);
+            this.label6.TabIndex = 22;
+            this.label6.Text = "Tổng tiền";
+            // 
+            // textTongTien
+            // 
+            this.textTongTien.Location = new System.Drawing.Point(563, 200);
+            this.textTongTien.Name = "textTongTien";
+            this.textTongTien.Size = new System.Drawing.Size(121, 22);
+            this.textTongTien.TabIndex = 23;
             // 
             // KH_MuaHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textTongTien);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.bntXemSP);
+            this.Controls.Add(this.comBoxMaSP);
+            this.Controls.Add(this.comBoxMaDN);
+            this.Controls.Add(this.textSoLuong);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnDatHang);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.comBoxKV);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.comBoxMaKH);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comBoxHTTT);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridMuaSP);
             this.Name = "KH_MuaHang";
             this.Text = "KH_MuaHang";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.KH_MuaHang_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridMuaSP)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -265,23 +264,23 @@ namespace HeThongVanChuyenHangOnl.KhachHang
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView dataGridMuaSP;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comBoxHTTT;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comBoxMaKH;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox comBoxKV;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnDatHang;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textSoLuong;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox comBoxMaDN;
+        private System.Windows.Forms.ComboBox comBoxMaSP;
+        private System.Windows.Forms.Button bntXemSP;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textTongTien;
     }
 }

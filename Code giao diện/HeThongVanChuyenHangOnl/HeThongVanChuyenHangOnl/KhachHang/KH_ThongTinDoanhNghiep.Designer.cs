@@ -29,23 +29,23 @@ namespace HeThongVanChuyenHangOnl.KhachHang
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewThongTin = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewThongTin)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dataGridViewThongTin
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 73);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(775, 365);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridViewThongTin.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dataGridViewThongTin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewThongTin.Location = new System.Drawing.Point(13, 73);
+            this.dataGridViewThongTin.Name = "dataGridViewThongTin";
+            this.dataGridViewThongTin.RowHeadersWidth = 51;
+            this.dataGridViewThongTin.RowTemplate.Height = 24;
+            this.dataGridViewThongTin.Size = new System.Drawing.Size(775, 365);
+            this.dataGridViewThongTin.TabIndex = 0;
             // 
             // label1
             // 
@@ -73,11 +73,11 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridViewThongTin);
             this.Name = "KH_ThongTinDoanhNghiep";
             this.Text = "KH_ThongTinDoanhNghiep";
             this.Load += new System.EventHandler(this.KH_ThongTinDoanhNghiep_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewThongTin)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -86,7 +86,7 @@ namespace HeThongVanChuyenHangOnl.KhachHang
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewThongTin;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
     }

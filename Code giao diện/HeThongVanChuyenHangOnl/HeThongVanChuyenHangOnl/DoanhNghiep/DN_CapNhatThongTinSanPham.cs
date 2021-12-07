@@ -62,19 +62,7 @@ namespace HeThongVanChuyenHangOnl.DoanhNghiep
         {
 
         }
-        //DataSet GetAllCapNhat()
-        //{
-        //    DataSet data = new DataSet();
-        //    string query = "CAPNHAP_TTIN_SP N'" + comBoxMaDN.SelectedValue + "'";
-        //    using (SqlConnection connection = new SqlConnection(conect_data.connectionString))
-        //    {
-        //        connection.Open();
-        //        SqlDataAdapter dap = new SqlDataAdapter(query, connection);
-        //        dap.Fill(data);
-        //        connection.Close();
-        //    }
-        //    return data;
-        //}
+
 
         private void comBoxMaSP_SelectedIndexChanged(object sender, EventArgs e)
         {

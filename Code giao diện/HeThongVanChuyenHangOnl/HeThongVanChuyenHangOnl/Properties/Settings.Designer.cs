@@ -12,7 +12,7 @@ namespace HeThongVanChuyenHangOnl.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.8.1.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.10.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -26,8 +26,7 @@ namespace HeThongVanChuyenHangOnl.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DUYNGUYEN\\SQLEXPRESS;Initial Catalog=NHOM6_HTDCH;Integrated Security=" +
-            "True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=HONGUYENLEVY;Initial Catalog=NHOM6_HTDCH;Integrated Security=True")]
         public string HeThongVanChuyenHangOnl {
             get {
                 return ((string)(this["HeThongVanChuyenHangOnl"]));
