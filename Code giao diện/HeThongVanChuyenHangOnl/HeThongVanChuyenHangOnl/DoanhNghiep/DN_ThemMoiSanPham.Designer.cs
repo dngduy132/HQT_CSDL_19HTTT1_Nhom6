@@ -35,16 +35,16 @@ namespace HeThongVanChuyenHangOnl.DoanhNghiep
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textMaSP = new System.Windows.Forms.TextBox();
+            this.comBoxMaDN = new System.Windows.Forms.ComboBox();
+            this.textTenSP = new System.Windows.Forms.TextBox();
+            this.textGiaSP = new System.Windows.Forms.TextBox();
+            this.textSoLuong = new System.Windows.Forms.TextBox();
+            this.textMoTa = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comBoxMaCN = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -55,7 +55,6 @@ namespace HeThongVanChuyenHangOnl.DoanhNghiep
             this.label1.Size = new System.Drawing.Size(118, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã doanh nghiệp";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -65,7 +64,6 @@ namespace HeThongVanChuyenHangOnl.DoanhNghiep
             this.label2.Size = new System.Drawing.Size(93, 17);
             this.label2.TabIndex = 1;
             this.label2.Text = "Mã sản phẩm";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -103,48 +101,49 @@ namespace HeThongVanChuyenHangOnl.DoanhNghiep
             this.label6.TabIndex = 5;
             this.label6.Text = "Mô tả";
             // 
-            // textBox1
+            // textMaSP
             // 
-            this.textBox1.Location = new System.Drawing.Point(211, 124);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(144, 22);
-            this.textBox1.TabIndex = 6;
+            this.textMaSP.Location = new System.Drawing.Point(211, 124);
+            this.textMaSP.Name = "textMaSP";
+            this.textMaSP.Size = new System.Drawing.Size(144, 22);
+            this.textMaSP.TabIndex = 6;
             // 
-            // comboBox1
+            // comBoxMaDN
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(211, 78);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(144, 24);
-            this.comboBox1.TabIndex = 7;
+            this.comBoxMaDN.FormattingEnabled = true;
+            this.comBoxMaDN.Location = new System.Drawing.Point(211, 78);
+            this.comBoxMaDN.Name = "comBoxMaDN";
+            this.comBoxMaDN.Size = new System.Drawing.Size(144, 24);
+            this.comBoxMaDN.TabIndex = 7;
+            this.comBoxMaDN.SelectedIndexChanged += new System.EventHandler(this.comBoxMaDN_SelectedIndexChanged);
             // 
-            // textBox2
+            // textTenSP
             // 
-            this.textBox2.Location = new System.Drawing.Point(634, 119);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(144, 22);
-            this.textBox2.TabIndex = 8;
+            this.textTenSP.Location = new System.Drawing.Point(634, 119);
+            this.textTenSP.Name = "textTenSP";
+            this.textTenSP.Size = new System.Drawing.Size(144, 22);
+            this.textTenSP.TabIndex = 8;
             // 
-            // textBox3
+            // textGiaSP
             // 
-            this.textBox3.Location = new System.Drawing.Point(211, 172);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(144, 22);
-            this.textBox3.TabIndex = 9;
+            this.textGiaSP.Location = new System.Drawing.Point(211, 172);
+            this.textGiaSP.Name = "textGiaSP";
+            this.textGiaSP.Size = new System.Drawing.Size(144, 22);
+            this.textGiaSP.TabIndex = 9;
             // 
-            // textBox4
+            // textSoLuong
             // 
-            this.textBox4.Location = new System.Drawing.Point(634, 167);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(144, 22);
-            this.textBox4.TabIndex = 10;
+            this.textSoLuong.Location = new System.Drawing.Point(634, 167);
+            this.textSoLuong.Name = "textSoLuong";
+            this.textSoLuong.Size = new System.Drawing.Size(144, 22);
+            this.textSoLuong.TabIndex = 10;
             // 
-            // textBox5
+            // textMoTa
             // 
-            this.textBox5.Location = new System.Drawing.Point(214, 221);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(144, 22);
-            this.textBox5.TabIndex = 11;
+            this.textMoTa.Location = new System.Drawing.Point(214, 221);
+            this.textMoTa.Name = "textMoTa";
+            this.textMoTa.Size = new System.Drawing.Size(144, 22);
+            this.textMoTa.TabIndex = 11;
             // 
             // button1
             // 
@@ -154,7 +153,7 @@ namespace HeThongVanChuyenHangOnl.DoanhNghiep
             this.button1.TabIndex = 12;
             this.button1.Text = "Cập nhật";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.btnCapNhat_Click);
             // 
             // label7
             // 
@@ -175,29 +174,29 @@ namespace HeThongVanChuyenHangOnl.DoanhNghiep
             this.label8.TabIndex = 14;
             this.label8.Text = "Mã chi nhánh";
             // 
-            // comboBox2
+            // comBoxMaCN
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(634, 75);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(144, 24);
-            this.comboBox2.TabIndex = 15;
+            this.comBoxMaCN.FormattingEnabled = true;
+            this.comBoxMaCN.Location = new System.Drawing.Point(634, 75);
+            this.comBoxMaCN.Name = "comBoxMaCN";
+            this.comBoxMaCN.Size = new System.Drawing.Size(144, 24);
+            this.comBoxMaCN.TabIndex = 15;
             // 
             // DN_ThemMoiSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.comBoxMaCN);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textMoTa);
+            this.Controls.Add(this.textSoLuong);
+            this.Controls.Add(this.textGiaSP);
+            this.Controls.Add(this.textTenSP);
+            this.Controls.Add(this.comBoxMaDN);
+            this.Controls.Add(this.textMaSP);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -206,6 +205,7 @@ namespace HeThongVanChuyenHangOnl.DoanhNghiep
             this.Controls.Add(this.label1);
             this.Name = "DN_ThemMoiSanPham";
             this.Text = "DN_ThemMoiSanPham";
+            this.Load += new System.EventHandler(this.DN_ThemMoiSanPham_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -219,15 +219,15 @@ namespace HeThongVanChuyenHangOnl.DoanhNghiep
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.ComboBox comBoxMaDN;
+        private System.Windows.Forms.TextBox textTenSP;
+        private System.Windows.Forms.TextBox textGiaSP;
+        private System.Windows.Forms.TextBox textSoLuong;
+        private System.Windows.Forms.TextBox textMoTa;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comBoxMaCN;
+        private System.Windows.Forms.TextBox textMaSP;
     }
 }

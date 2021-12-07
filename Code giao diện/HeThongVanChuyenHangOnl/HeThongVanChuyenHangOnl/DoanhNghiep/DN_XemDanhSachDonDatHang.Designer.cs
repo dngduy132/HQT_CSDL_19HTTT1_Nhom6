@@ -30,7 +30,7 @@ namespace HeThongVanChuyenHangOnl.DoanhNghiep
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBoxMaDN = new System.Windows.Forms.ComboBox();
+            this.comBoxMaDN = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridViewDonHang = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -50,14 +50,13 @@ namespace HeThongVanChuyenHangOnl.DoanhNghiep
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã doanh nghiệp";
             // 
-            // comboBoxMaDN
+            // comBoxMaDN
             // 
-            this.comboBoxMaDN.FormattingEnabled = true;
-            this.comboBoxMaDN.Location = new System.Drawing.Point(162, 76);
-            this.comboBoxMaDN.Name = "comboBoxMaDN";
-            this.comboBoxMaDN.Size = new System.Drawing.Size(173, 24);
-            this.comboBoxMaDN.TabIndex = 1;
-            this.comboBoxMaDN.SelectedIndexChanged += new System.EventHandler(this.comboBoxMaDN_SelectedIndexChanged);
+            this.comBoxMaDN.FormattingEnabled = true;
+            this.comBoxMaDN.Location = new System.Drawing.Point(162, 76);
+            this.comBoxMaDN.Name = "comBoxMaDN";
+            this.comBoxMaDN.Size = new System.Drawing.Size(173, 24);
+            this.comBoxMaDN.TabIndex = 1;
             // 
             // label2
             // 
@@ -125,7 +124,7 @@ namespace HeThongVanChuyenHangOnl.DoanhNghiep
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridViewDonHang);
-            this.Controls.Add(this.comboBoxMaDN);
+            this.Controls.Add(this.comBoxMaDN);
             this.Controls.Add(this.label1);
             this.Name = "DN_XemDanhSachDonDatHang";
             this.Text = "DN_XemDanhSachDonDatHang";
@@ -141,7 +140,7 @@ namespace HeThongVanChuyenHangOnl.DoanhNghiep
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBoxMaDN;
+        private System.Windows.Forms.ComboBox comBoxMaDN;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridViewDonHang;
         private System.Windows.Forms.Panel panel1;

@@ -62,6 +62,16 @@ namespace HeThongVanChuyenHangOnl
             cmd.Dispose();//Giải phóng bộ nhớ
             cmd = null;
         }
-
+        public static string GetFieldValues(string sql)
+        {
+            string ma = "";
+            SqlCommand cmd = new SqlCommand(sql, con);
+            SqlDataReader reader;
+            reader = cmd.ExecuteReader();
+            while (reader.Read())
+                ma = reader.GetValue(0).ToString();
+            reader.Close();
+            return ma;
+        }
     }
 }
