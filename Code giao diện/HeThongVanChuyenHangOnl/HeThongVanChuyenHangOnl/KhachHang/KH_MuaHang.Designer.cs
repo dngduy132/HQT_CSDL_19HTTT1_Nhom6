@@ -150,7 +150,7 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             // 
             // btnDatHang
             // 
-            this.btnDatHang.Location = new System.Drawing.Point(257, 188);
+            this.btnDatHang.Location = new System.Drawing.Point(603, 107);
             this.btnDatHang.Name = "btnDatHang";
             this.btnDatHang.Size = new System.Drawing.Size(123, 29);
             this.btnDatHang.TabIndex = 12;
@@ -174,6 +174,7 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             this.textSoLuong.Name = "textSoLuong";
             this.textSoLuong.Size = new System.Drawing.Size(121, 22);
             this.textSoLuong.TabIndex = 17;
+            this.textSoLuong.TextChanged += new System.EventHandler(this.textSoLuong_TextChanged);
             // 
             // label8
             // 
@@ -203,7 +204,7 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             // 
             // bntXemSP
             // 
-            this.bntXemSP.Location = new System.Drawing.Point(291, 107);
+            this.bntXemSP.Location = new System.Drawing.Point(405, 107);
             this.bntXemSP.Name = "bntXemSP";
             this.bntXemSP.Size = new System.Drawing.Size(123, 31);
             this.bntXemSP.TabIndex = 21;
@@ -214,7 +215,7 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(460, 200);
+            this.label6.Location = new System.Drawing.Point(422, 197);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(68, 17);
             this.label6.TabIndex = 22;
@@ -222,7 +223,7 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             // 
             // textTongTien
             // 
-            this.textTongTien.Location = new System.Drawing.Point(563, 200);
+            this.textTongTien.Location = new System.Drawing.Point(539, 191);
             this.textTongTien.Name = "textTongTien";
             this.textTongTien.Size = new System.Drawing.Size(121, 22);
             this.textTongTien.TabIndex = 23;

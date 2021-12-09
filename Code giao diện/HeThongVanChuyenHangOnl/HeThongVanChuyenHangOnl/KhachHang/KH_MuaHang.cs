@@ -140,6 +140,7 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             comBoxKV.Text = "";
             comBoxMaSP.Text = "";
             textSoLuong.Text = "";
+            dataGridMuaSP.DataSource = "";
         }
 
         private void btnDatHang_Click(object sender, EventArgs e)
@@ -170,7 +171,7 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             }
             if (comBoxMaDN.Text.Trim().Length == 0)
             {
-                MessageBox.Show("Bạn phải chọn mã doanh nghiep", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bạn phải chọn mã doanh nghiệp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 comBoxMaDN.Focus();
                 return;
             }
@@ -180,14 +181,35 @@ namespace HeThongVanChuyenHangOnl.KhachHang
                 comBoxMaSP.Focus();
                 return;
             }
-            
+            double sl;
+            sl = Convert.ToDouble(function.GetFieldValues("SELECT SO_LUONG FROM SAN_PHAM WHERE MA_SP = N'" + comBoxMaSP.SelectedValue + "'"));
+            if (Convert.ToDouble(textSoLuong.Text) > sl)
+            {
+                MessageBox.Show("Số lượng mặt hàng này chỉ còn " + sl, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                textSoLuong.Text = "";
+                textSoLuong.Focus();
+                return;
+            }
+
             query = "KH_MUA_HANG N'" + n + "', N'"+ comBoxKV.SelectedValue +"', N'" + comBoxMaDN.SelectedValue + "', N'" + comBoxMaKH.SelectedValue + "', N'" + comBoxHTTT.SelectedValue + "', N'" + textSoLuong.Text + "', N'" + comBoxMaSP.SelectedValue + "'";
             function.RunSQL(query);
-            //string sql = ("SELECT ");
-            //UPDATE SO_LUONG, TONG_TIEN
+            
             MessageBox.Show("Bạn đã thêm thành công sản phẩm ^.^", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             ResetValueHoaDon();
             //LoadData();
+        }
+
+        private void textSoLuong_TextChanged(object sender, EventArgs e)
+        {
+            double tt, sl;
+            if (textSoLuong.Text == "")
+                sl = 0;
+            else
+                sl = Convert.ToDouble(textSoLuong.Text);
+            double gia = Convert.ToDouble(function.GetFieldValues("SELECT GIA FROM SAN_PHAM WHERE MA_SP = N'" + comBoxMaSP.SelectedValue + "'"));
+
+            tt = sl * gia;
+            textTongTien.Text = tt.ToString();
         }
     }
 }

@@ -29,34 +29,35 @@ namespace HeThongVanChuyenHangOnl.QuanTri
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comBoxMaDN = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnCapNhat = new System.Windows.Forms.Button();
+            this.dataGridViewCapNhatThongTinDN = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.comBoxQuan = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCapNhatThongTinDN)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // comBoxMaDN
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(183, 61);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(160, 24);
-            this.comboBox1.TabIndex = 1;
+            this.comBoxMaDN.FormattingEnabled = true;
+            this.comBoxMaDN.Location = new System.Drawing.Point(183, 61);
+            this.comBoxMaDN.Name = "comBoxMaDN";
+            this.comBoxMaDN.Size = new System.Drawing.Size(160, 24);
+            this.comBoxMaDN.TabIndex = 1;
+            this.comBoxMaDN.SelectedIndexChanged += new System.EventHandler(this.comBoxMaDN_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(21, 61);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 17);
+            this.label1.Size = new System.Drawing.Size(118, 17);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Tên doanh nghiệp";
+            this.label1.Text = "Mã doanh nghiệp";
             // 
             // label2
             // 
@@ -67,32 +68,26 @@ namespace HeThongVanChuyenHangOnl.QuanTri
             this.label2.TabIndex = 4;
             this.label2.Text = "Quận";
             // 
-            // textBox1
+            // btnCapNhat
             // 
-            this.textBox1.Location = new System.Drawing.Point(183, 102);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(160, 22);
-            this.textBox1.TabIndex = 5;
+            this.btnCapNhat.Location = new System.Drawing.Point(633, 73);
+            this.btnCapNhat.Name = "btnCapNhat";
+            this.btnCapNhat.Size = new System.Drawing.Size(107, 34);
+            this.btnCapNhat.TabIndex = 6;
+            this.btnCapNhat.Text = "Cập nhật";
+            this.btnCapNhat.UseVisualStyleBackColor = true;
+            this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
             // 
-            // button1
+            // dataGridViewCapNhatThongTinDN
             // 
-            this.button1.Location = new System.Drawing.Point(633, 73);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(107, 34);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Cập nhật";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(24, 144);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(764, 294);
-            this.dataGridView1.TabIndex = 7;
+            this.dataGridViewCapNhatThongTinDN.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.dataGridViewCapNhatThongTinDN.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewCapNhatThongTinDN.Location = new System.Drawing.Point(24, 144);
+            this.dataGridViewCapNhatThongTinDN.Name = "dataGridViewCapNhatThongTinDN";
+            this.dataGridViewCapNhatThongTinDN.RowHeadersWidth = 51;
+            this.dataGridViewCapNhatThongTinDN.RowTemplate.Height = 24;
+            this.dataGridViewCapNhatThongTinDN.Size = new System.Drawing.Size(764, 294);
+            this.dataGridViewCapNhatThongTinDN.TabIndex = 7;
             // 
             // label3
             // 
@@ -113,22 +108,31 @@ namespace HeThongVanChuyenHangOnl.QuanTri
             this.panel1.Size = new System.Drawing.Size(800, 55);
             this.panel1.TabIndex = 9;
             // 
+            // comBoxQuan
+            // 
+            this.comBoxQuan.FormattingEnabled = true;
+            this.comBoxQuan.Location = new System.Drawing.Point(183, 102);
+            this.comBoxQuan.Name = "comBoxQuan";
+            this.comBoxQuan.Size = new System.Drawing.Size(160, 24);
+            this.comBoxQuan.TabIndex = 10;
+            this.comBoxQuan.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // QT_CapNhatThongTinDoanhNghiep
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.comBoxQuan);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.dataGridViewCapNhatThongTinDN);
+            this.Controls.Add(this.btnCapNhat);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comBoxMaDN);
             this.Name = "QT_CapNhatThongTinDoanhNghiep";
             this.Text = "QT_CapNhatThongTinDoanhNghiep";
             this.Load += new System.EventHandler(this.QT_CapNhatThongTinDoanhNghiep_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCapNhatThongTinDN)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -137,13 +141,13 @@ namespace HeThongVanChuyenHangOnl.QuanTri
         }
 
         #endregion
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comBoxMaDN;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnCapNhat;
+        private System.Windows.Forms.DataGridView dataGridViewCapNhatThongTinDN;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ComboBox comBoxQuan;
     }
 }

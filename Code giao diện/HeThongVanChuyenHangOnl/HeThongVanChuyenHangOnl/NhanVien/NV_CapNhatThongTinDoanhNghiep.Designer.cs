@@ -32,10 +32,12 @@ namespace HeThongVanChuyenHangOnl.NhanVien
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comBoxMaDN = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.textNguoiDaiDien = new System.Windows.Forms.TextBox();
+            this.btnCapNhat = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textTenDN = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,11 +45,11 @@ namespace HeThongVanChuyenHangOnl.NhanVien
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(80, 9);
+            this.label1.Location = new System.Drawing.Point(184, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(638, 38);
+            this.label1.Size = new System.Drawing.Size(479, 37);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Cập nhật người đại diện của doanh nghiệp";
+            this.label1.Text = "Cập nhật thông tin doanh nghiệp";
             // 
             // panel1
             // 
@@ -68,49 +70,68 @@ namespace HeThongVanChuyenHangOnl.NhanVien
             this.label2.TabIndex = 2;
             this.label2.Text = "Mã doanh nghiệp";
             // 
-            // comboBox1
+            // comBoxMaDN
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(178, 76);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 3;
+            this.comBoxMaDN.FormattingEnabled = true;
+            this.comBoxMaDN.Location = new System.Drawing.Point(178, 76);
+            this.comBoxMaDN.Name = "comBoxMaDN";
+            this.comBoxMaDN.Size = new System.Drawing.Size(121, 24);
+            this.comBoxMaDN.TabIndex = 3;
+            this.comBoxMaDN.SelectedIndexChanged += new System.EventHandler(this.comBoxMaDN_SelectedIndexChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 152);
+            this.label3.Location = new System.Drawing.Point(13, 185);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(126, 17);
             this.label3.TabIndex = 4;
             this.label3.Text = "Tên người đại diện";
             // 
-            // textBox1
+            // textNguoiDaiDien
             // 
-            this.textBox1.Location = new System.Drawing.Point(178, 147);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(195, 22);
-            this.textBox1.TabIndex = 6;
+            this.textNguoiDaiDien.Location = new System.Drawing.Point(178, 180);
+            this.textNguoiDaiDien.Name = "textNguoiDaiDien";
+            this.textNguoiDaiDien.Size = new System.Drawing.Size(195, 22);
+            this.textNguoiDaiDien.TabIndex = 6;
             // 
-            // button1
+            // btnCapNhat
             // 
-            this.button1.Location = new System.Drawing.Point(440, 143);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 34);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Cập nhật";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnCapNhat.Location = new System.Drawing.Point(440, 143);
+            this.btnCapNhat.Name = "btnCapNhat";
+            this.btnCapNhat.Size = new System.Drawing.Size(90, 34);
+            this.btnCapNhat.TabIndex = 7;
+            this.btnCapNhat.Text = "Cập nhật";
+            this.btnCapNhat.UseVisualStyleBackColor = true;
+            this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(13, 143);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(124, 17);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Tên doanh nghiệp";
+            // 
+            // textTenDN
+            // 
+            this.textTenDN.Location = new System.Drawing.Point(178, 140);
+            this.textTenDN.Name = "textTenDN";
+            this.textTenDN.Size = new System.Drawing.Size(195, 22);
+            this.textTenDN.TabIndex = 9;
             // 
             // NV_CapNhatThongTinDoanhNghiep
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textTenDN);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.btnCapNhat);
+            this.Controls.Add(this.textNguoiDaiDien);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comBoxMaDN);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Name = "NV_CapNhatThongTinDoanhNghiep";
@@ -128,9 +149,11 @@ namespace HeThongVanChuyenHangOnl.NhanVien
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comBoxMaDN;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textNguoiDaiDien;
+        private System.Windows.Forms.Button btnCapNhat;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textTenDN;
     }
 }

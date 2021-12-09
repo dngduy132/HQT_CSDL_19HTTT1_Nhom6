@@ -60,8 +60,7 @@ namespace HeThongVanChuyenHangOnl.DoanhNghiep
             function.RunSQL(query);
             loadData();
             slDonDatHang_tb.Text = GetAllDonDatHang().Tables[0].Rows[0][0].ToString();
-            MessageBox.Show("Bạn đã thêm thành công sản phẩm ^.^", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //ResetValueHoaDon();
+            
         }
 
        

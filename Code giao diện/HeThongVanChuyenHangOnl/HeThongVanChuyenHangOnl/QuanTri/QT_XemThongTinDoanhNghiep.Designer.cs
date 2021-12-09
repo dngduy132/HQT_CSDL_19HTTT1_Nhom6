@@ -30,9 +30,9 @@ namespace HeThongVanChuyenHangOnl.QuanTri
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewXemThongTinDN = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewXemThongTinDN)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,16 +47,16 @@ namespace HeThongVanChuyenHangOnl.QuanTri
             this.label1.Text = "Thông tin doanh nghiệp";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // dataGridView1
+            // dataGridViewXemThongTinDN
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.DarkSeaGreen;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 75);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(776, 363);
-            this.dataGridView1.TabIndex = 1;
+            this.dataGridViewXemThongTinDN.BackgroundColor = System.Drawing.Color.DarkSeaGreen;
+            this.dataGridViewXemThongTinDN.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewXemThongTinDN.Location = new System.Drawing.Point(12, 75);
+            this.dataGridViewXemThongTinDN.Name = "dataGridViewXemThongTinDN";
+            this.dataGridViewXemThongTinDN.RowHeadersWidth = 51;
+            this.dataGridViewXemThongTinDN.RowTemplate.Height = 24;
+            this.dataGridViewXemThongTinDN.Size = new System.Drawing.Size(776, 363);
+            this.dataGridViewXemThongTinDN.TabIndex = 1;
             // 
             // panel1
             // 
@@ -73,11 +73,11 @@ namespace HeThongVanChuyenHangOnl.QuanTri
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridViewXemThongTinDN);
             this.Name = "QT_XemThongTinDoanhNghiep";
             this.Text = "QT_XemThongTinDoanhNghiep";
             this.Load += new System.EventHandler(this.QT_XemThongTinDoanhNghiep_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewXemThongTinDN)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -87,7 +87,7 @@ namespace HeThongVanChuyenHangOnl.QuanTri
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewXemThongTinDN;
         private System.Windows.Forms.Panel panel1;
     }
 }

@@ -53,6 +53,12 @@ namespace HeThongVanChuyenHangOnl.KhachHang
 
         private void btnEnter_Click(object sender, EventArgs e)
         {
+            if (comBoxMaDN.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Bạn phải chọn mã doanh nghiệp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                comBoxMaDN.Focus();
+                return;
+            }
             string query = "KH_XEM_SP_THEO_MADN N'" + comBoxMaDN.SelectedValue + "'";
             function.RunSQL(query);
             loadData();
