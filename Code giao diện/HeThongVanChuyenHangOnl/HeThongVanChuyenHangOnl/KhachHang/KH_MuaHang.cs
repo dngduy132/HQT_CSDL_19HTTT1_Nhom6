@@ -19,56 +19,6 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             InitializeComponent();
         }
 
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void KH_MuaHang_Load(object sender, EventArgs e)
         {
             function.FillCombo("SELECT MA_KH FROM KHACH_HANG", comBoxMaKH, "MA_KH", "MA_KH");
@@ -79,8 +29,6 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             comBoxKV.SelectedIndex = -1;
             function.FillCombo("SELECT MADN FROM DOANH_NGHIEP", comBoxMaDN, "MADN", "MADN");
             comBoxMaDN.SelectedIndex = -1;
-            
-
         }
         
         private void LoadData()
@@ -108,11 +56,8 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             if (comBoxMaDN.Text == "")
             {
                 comBoxMaSP.SelectedValue = "";
-
             }
             str = "SELECT SP.MA_SP FROM  DOANH_NGHIEP DN JOIN CHI_NHANH CN  ON(DN.MADN = CN.MADN)  JOIN CHINHANH_SANPHAM CN_SP  ON(CN.MA_CN = CN_SP.MA_CN)  JOIN SAN_PHAM SP ON(CN_SP.MA_SP = SP.MA_SP) WHERE DN.MADN = N'" + comBoxMaDN.SelectedValue + "'";
-
-            
             function.FillCombo(str, comBoxMaSP, "MA_SP", "MA_SP");
             comBoxMaSP.SelectedIndex = -1;
         }
@@ -129,7 +74,6 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             }
             function.RunSQL(query);
             LoadData();
-           
         }
 
         private void ResetValueHoaDon()
@@ -190,13 +134,11 @@ namespace HeThongVanChuyenHangOnl.KhachHang
                 textSoLuong.Focus();
                 return;
             }
-
             query = "KH_MUA_HANG N'" + n + "', N'"+ comBoxKV.SelectedValue +"', N'" + comBoxMaDN.SelectedValue + "', N'" + comBoxMaKH.SelectedValue + "', N'" + comBoxHTTT.SelectedValue + "', N'" + textSoLuong.Text + "', N'" + comBoxMaSP.SelectedValue + "'";
             function.RunSQL(query);
             
-            MessageBox.Show("Bạn đã thêm thành công sản phẩm ^.^", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Bạn đã đặt thành công sản phẩm ^.^", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             ResetValueHoaDon();
-            //LoadData();
         }
 
         private void textSoLuong_TextChanged(object sender, EventArgs e)
@@ -207,7 +149,6 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             else
                 sl = Convert.ToDouble(textSoLuong.Text);
             double gia = Convert.ToDouble(function.GetFieldValues("SELECT GIA FROM SAN_PHAM WHERE MA_SP = N'" + comBoxMaSP.SelectedValue + "'"));
-
             tt = sl * gia;
             textTongTien.Text = tt.ToString();
         }

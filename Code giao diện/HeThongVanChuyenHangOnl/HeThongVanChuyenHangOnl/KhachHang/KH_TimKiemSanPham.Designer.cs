@@ -38,7 +38,7 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             this.dataGridViewTimSP = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.textKetQua = new System.Windows.Forms.TextBox();
-            this.textTenSP = new System.Windows.Forms.TextBox();
+            this.comBoxTenSP = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTimSP)).BeginInit();
             this.SuspendLayout();
@@ -125,19 +125,20 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             this.textKetQua.Size = new System.Drawing.Size(100, 22);
             this.textKetQua.TabIndex = 8;
             // 
-            // textTenSP
+            // comBoxTenSP
             // 
-            this.textTenSP.Location = new System.Drawing.Point(178, 114);
-            this.textTenSP.Name = "textTenSP";
-            this.textTenSP.Size = new System.Drawing.Size(150, 22);
-            this.textTenSP.TabIndex = 9;
+            this.comBoxTenSP.FormattingEnabled = true;
+            this.comBoxTenSP.Location = new System.Drawing.Point(178, 114);
+            this.comBoxTenSP.Name = "comBoxTenSP";
+            this.comBoxTenSP.Size = new System.Drawing.Size(150, 24);
+            this.comBoxTenSP.TabIndex = 9;
             // 
             // KH_TimKiemSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textTenSP);
+            this.Controls.Add(this.comBoxTenSP);
             this.Controls.Add(this.textKetQua);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dataGridViewTimSP);
@@ -168,6 +169,6 @@ namespace HeThongVanChuyenHangOnl.KhachHang
         private System.Windows.Forms.DataGridView dataGridViewTimSP;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textKetQua;
-        private System.Windows.Forms.TextBox textTenSP;
+        private System.Windows.Forms.ComboBox comBoxTenSP;
     }
 }

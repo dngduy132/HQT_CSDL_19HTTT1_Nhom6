@@ -18,21 +18,18 @@ namespace HeThongVanChuyenHangOnl.DoanhNghiep
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void loadData()
         {
             dataGridViewDonHang.DataSource = GetAllDonDatHang().Tables[1];
         }
+
         private void DN_XemDanhSachDonDatHang_Load(object sender, EventArgs e)
         {
             function.FillCombo("SELECT MADN FROM DOANH_NGHIEP", comBoxMaDN, "MADN", "MADN");
             comBoxMaDN.SelectedIndex = -1;
             loadData();
         }
+
         DataSet GetAllDonDatHang()
         {
             DataSet data = new DataSet();
@@ -58,12 +55,18 @@ namespace HeThongVanChuyenHangOnl.DoanhNghiep
                 return;
             }
             function.RunSQL(query);
+            DataSet data = new DataSet();
+            using (SqlConnection connection = new SqlConnection(conect_data.connectionString))
+            {
+                connection.Open();
+                SqlDataAdapter dap = new SqlDataAdapter(query, connection);
+                dap.Fill(data);
+                connection.Close();
+            }
+            slDonDatHang_tb.Text = data.Tables[0].Rows[0][0].ToString();
             loadData();
-            slDonDatHang_tb.Text = GetAllDonDatHang().Tables[0].Rows[0][0].ToString();
-            
+            MessageBox.Show("Thống kê thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-
-       
     }
 }
 

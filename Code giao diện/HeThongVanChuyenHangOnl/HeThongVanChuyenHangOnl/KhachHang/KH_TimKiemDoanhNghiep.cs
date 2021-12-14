@@ -18,11 +18,6 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void KH_TimKiemDoanhNghiep_Load(object sender, EventArgs e)
         {
             function.FillCombo("SELECT TEN_DN FROM DOANH_NGHIEP", comBoxTenDN, "TEN_DN", "TEN_DN");
@@ -66,8 +61,17 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             }
             string query = "TIMDN_THEO_TEN_QUAN N'" + comBoxTenDN.SelectedValue + "', N'" + comBoxQuan.SelectedValue + "'";
             function.RunSQL(query);
+            DataSet data = new DataSet();
+            using (SqlConnection connection = new SqlConnection(conect_data.connectionString))
+            {
+                connection.Open();
+                SqlDataAdapter dap = new SqlDataAdapter(query, connection);
+                dap.Fill(data);
+                connection.Close();
+            }
+            textKetQua.Text = data.Tables[0].Rows[0][0].ToString();
             loadData();
-            textKetQua.Text = GetAllTimKiemDN().Tables[0].Rows[0][0].ToString();
+            MessageBox.Show("Tìm kiếm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

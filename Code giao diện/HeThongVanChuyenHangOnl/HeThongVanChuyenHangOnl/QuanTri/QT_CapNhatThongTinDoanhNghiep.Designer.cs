@@ -115,7 +115,6 @@ namespace HeThongVanChuyenHangOnl.QuanTri
             this.comBoxQuan.Name = "comBoxQuan";
             this.comBoxQuan.Size = new System.Drawing.Size(160, 24);
             this.comBoxQuan.TabIndex = 10;
-            this.comBoxQuan.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // QT_CapNhatThongTinDoanhNghiep
             // 

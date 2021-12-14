@@ -146,7 +146,6 @@ namespace HeThongVanChuyenHangOnl.DoanhNghiep
             this.label6.Size = new System.Drawing.Size(93, 17);
             this.label6.TabIndex = 10;
             this.label6.Text = "Mã chi nhánh";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // comBoxMaCN
             // 

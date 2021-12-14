@@ -16,7 +16,6 @@ namespace HeThongVanChuyenHangOnl.DoanhNghiep
         {
             InitializeComponent();
         }
-
         
         private void comBoxMaDN_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -24,14 +23,12 @@ namespace HeThongVanChuyenHangOnl.DoanhNghiep
             if (comBoxMaDN.Text == "")
             {
                 comBoxMaCN.SelectedValue = "";
-
             }
             str = "Select MA_CN from CHI_NHANH where MaDN = N'" + comBoxMaDN.SelectedValue + "'";
             function.FillCombo(str, comBoxMaCN, "MA_CN", "MA_CN");
             comBoxMaCN.SelectedIndex = -1;
         }
 
-      
         private void DN_ThemMoiSanPham_Load(object sender, EventArgs e)
         {
             textMaSP.ReadOnly = true;
@@ -95,12 +92,9 @@ namespace HeThongVanChuyenHangOnl.DoanhNghiep
                 return;
             }
             query = "THEM_SP N'" + comBoxMaCN.SelectedValue + "', N'" + textMaSP.Text + "', N'" + textTenSP.Text + "', N'" + textGiaSP.Text + "', N'" + textSoLuong.Text + "', N'" + textMoTa.Text + "'";
-
             function.RunSQL(query);
             MessageBox.Show("Bạn đã thêm thành công sản phẩm ^.^", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             ResetValueCapNhat();
         }
-
-   
     }
 }

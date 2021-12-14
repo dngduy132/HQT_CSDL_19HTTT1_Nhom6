@@ -19,35 +19,30 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void KH_ThongKeSanPham_Load(object sender, EventArgs e)
         {
             function.FillCombo("SELECT MADN FROM DOANH_NGHIEP", comBoxMaDN, "MADN", "MADN");
             comBoxMaDN.SelectedIndex = -1;
         }
 
-        //private void LoadDataSL()
-        //{
-        //    dataGridViewTKSP.DataSource = GetAllThongKeSL().Tables[1];
-        //}
+        private void LoadDataSL()
+        {
+            dataGridViewTKSP.DataSource = GetAllThongKeSL().Tables[1];
+        }
 
-        //DataSet GetAllThongKeSL()
-        //{
-        //    DataSet data = new DataSet();
-        //    string query = "KH_THONGKE_SP_SLUONG N'" + comBoxMaDN.SelectedValue + "',N'" + textSoLuongSP.Text + "'";
-        //    using (SqlConnection connection = new SqlConnection(conect_data.connectionString))
-        //    {
-        //        connection.Open();
-        //        SqlDataAdapter dap = new SqlDataAdapter(query, connection);
-        //        dap.Fill(data);
-        //        connection.Close();
-        //    }
-        //    return data;
-        //}
+        DataSet GetAllThongKeSL()
+        {
+            DataSet data = new DataSet();
+            string query = "KH_THONGKE_SP_SLUONG N'" + comBoxMaDN.SelectedValue + "',N'" + textSoLuongSP.Text + "'";
+            using (SqlConnection connection = new SqlConnection(conect_data.connectionString))
+            {
+                connection.Open();
+                SqlDataAdapter dap = new SqlDataAdapter(query, connection);
+                dap.Fill(data);
+                connection.Close();
+            }
+            return data;
+        }
 
         private void btnTKSoLuong_Click(object sender, EventArgs e)
         {
@@ -62,8 +57,7 @@ namespace HeThongVanChuyenHangOnl.KhachHang
                 MessageBox.Show("Bạn phải nhập số lượng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 textSoLuongSP.Focus();
                 return;
-            }
-            
+            }            
             string query = "KH_THONGKE_SP_SLUONG N'" + comBoxMaDN.SelectedValue + "',N'" + textSoLuongSP.Text + "'";
             function.RunSQL(query);
             DataSet data = new DataSet();
@@ -75,7 +69,8 @@ namespace HeThongVanChuyenHangOnl.KhachHang
                 connection.Close();
             }
             textKetQua.Text = data.Tables[0].Rows[0][0].ToString();
-            dataGridViewTKSP.DataSource = data.Tables[1];
+            LoadDataSL();
+            MessageBox.Show("Đã thống kê xong", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void LoadDataGia()
@@ -86,7 +81,7 @@ namespace HeThongVanChuyenHangOnl.KhachHang
         DataSet GetAllThongKeGia()
         {
             DataSet data = new DataSet();
-            string query = "KH_THONGKE_SP_SLUONG N'" + comBoxMaDN.SelectedValue + "',N'" + textSoLuongSP.Text + "'";
+            string query = "KH_THONGKE_SP_GIA N'" + comBoxMaDN.SelectedValue + "',N'" + textGiaSP.Text + "'";
             using (SqlConnection connection = new SqlConnection(conect_data.connectionString))
             {
                 connection.Open();
@@ -107,24 +102,23 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             }
             if (textGiaSP.Text.Trim().Length == 0)
             {
-                MessageBox.Show("Bạn phải chọn mã doanh nghiệp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bạn phải chọn nhập giá sản phẩm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 textGiaSP.Focus();
                 return;
             }
-            string query = "KH_THONGKE_SP_GIA N'" + comBoxMaDN.SelectedValue + "',N'" + textSoLuongSP.Text + "'";
+            string query = "KH_THONGKE_SP_GIA N'" + comBoxMaDN.SelectedValue + "',N'" + textGiaSP.Text + "'";
             function.RunSQL(query);
-            DataSet data = new DataSet();
+            DataSet data1 = new DataSet();
             using (SqlConnection connection = new SqlConnection(conect_data.connectionString))
             {
                 connection.Open();
                 SqlDataAdapter dap = new SqlDataAdapter(query, connection);
-                dap.Fill(data);
+                dap.Fill(data1);
                 connection.Close();
             }
-            textKetQua.Text = data.Tables[0].Rows[0][0].ToString();
-            dataGridViewTKSP.DataSource = data.Tables[1];
-            
-
+            textKetQua.Text = data1.Tables[0].Rows[0][0].ToString();
+            LoadDataGia();
+            MessageBox.Show("Đã thống kê xong", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

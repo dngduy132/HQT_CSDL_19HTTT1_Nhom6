@@ -61,7 +61,6 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             this.label1.Size = new System.Drawing.Size(225, 37);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mua sản phẩm";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // dataGridMuaSP
             // 
@@ -81,7 +80,6 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             this.label2.Size = new System.Drawing.Size(140, 17);
             this.label2.TabIndex = 3;
             this.label2.Text = "Hình thức thanh toán";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // comBoxHTTT
             // 
@@ -90,7 +88,6 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             this.comBoxHTTT.Name = "comBoxHTTT";
             this.comBoxHTTT.Size = new System.Drawing.Size(121, 24);
             this.comBoxHTTT.TabIndex = 4;
-            this.comBoxHTTT.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -100,7 +97,6 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             this.label3.Size = new System.Drawing.Size(86, 17);
             this.label3.TabIndex = 5;
             this.label3.Text = "Mã DNghiệp";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -110,7 +106,6 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             this.label4.Size = new System.Drawing.Size(105, 17);
             this.label4.TabIndex = 7;
             this.label4.Text = "Mã khách hàng";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // comBoxMaKH
             // 
@@ -128,7 +123,6 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             this.label5.Size = new System.Drawing.Size(86, 17);
             this.label5.TabIndex = 9;
             this.label5.Text = "Tên khu vực";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // comBoxKV
             // 
@@ -137,7 +131,6 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             this.comBoxKV.Name = "comBoxKV";
             this.comBoxKV.Size = new System.Drawing.Size(121, 24);
             this.comBoxKV.TabIndex = 10;
-            this.comBoxKV.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
             // panel1
             // 
@@ -166,7 +159,6 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             this.label7.Size = new System.Drawing.Size(93, 17);
             this.label7.TabIndex = 14;
             this.label7.Text = "Mã sản phẩm";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // textSoLuong
             // 

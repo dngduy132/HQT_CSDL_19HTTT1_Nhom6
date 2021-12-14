@@ -17,11 +17,6 @@ namespace HeThongVanChuyenHangOnl.NhanVien
             InitializeComponent();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void NV_CapNhatThongTinDoanhNghiep_Load(object sender, EventArgs e)
         {
             textTenDN.ReadOnly = true;
@@ -54,8 +49,6 @@ namespace HeThongVanChuyenHangOnl.NhanVien
             textNguoiDaiDien.Text = function.GetFieldValues(sql);
             string str = "SELECT TEN_DN FROM DOANH_NGHIEP WHERE MADN = N'" + comBoxMaDN.SelectedValue + "'";
             textTenDN.Text = function.GetFieldValues(str);
-        }
-
-        
+        }        
     }
 }

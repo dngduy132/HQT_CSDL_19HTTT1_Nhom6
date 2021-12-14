@@ -19,16 +19,6 @@ namespace HeThongVanChuyenHangOnl.QuanTri
             InitializeComponent();
         }
 
-        private void progressBar1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void QT_CapNhatThongTinDoanhNghiep_Load(object sender, EventArgs e)
         {
             function.FillCombo("SELECT MADN FROM DOANH_NGHIEP", comBoxMaDN, "MADN", "MADN");
@@ -37,7 +27,6 @@ namespace HeThongVanChuyenHangOnl.QuanTri
             comBoxQuan.SelectedIndex = -1;
             loadData();
         }
-
 
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
@@ -82,11 +71,6 @@ namespace HeThongVanChuyenHangOnl.QuanTri
                 connection.Close();
             }
             return data;
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

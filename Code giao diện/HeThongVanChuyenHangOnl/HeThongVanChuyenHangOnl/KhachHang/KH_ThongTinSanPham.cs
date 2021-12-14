@@ -23,14 +23,7 @@ namespace HeThongVanChuyenHangOnl.KhachHang
         {
             function.FillCombo("SELECT MADN FROM DOANH_NGHIEP", comBoxMaDN, "MADN", "MADN");
             comBoxMaDN.SelectedIndex = -1;
-            //loadData();
         }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
 
         private void loadData()
         {

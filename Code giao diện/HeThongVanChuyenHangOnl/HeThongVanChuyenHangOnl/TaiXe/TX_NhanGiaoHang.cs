@@ -23,8 +23,6 @@ namespace HeThongVanChuyenHangOnl.TaiXe
         {
             function.FillCombo("SELECT MA_TX FROM TAI_XE", comBoxMaTX, "MA_TX", "MA_TX");
             comBoxMaTX.SelectedIndex = -1;
-            
-            //loadData();
         }
 
         private void loadData()
@@ -54,7 +52,6 @@ namespace HeThongVanChuyenHangOnl.TaiXe
             loadData();
             function.FillCombo("TX_XEM_MAHD N'" + comBoxMaTX.SelectedValue + "'", comBoxMaDon, "MA_DON", "MA_DON");
             comBoxMaDon.SelectedIndex = -1;
-            //MessageBox.Show("Bạn đã nhận đơn hàng thành công ^.^", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnNhanDonHang_Click(object sender, EventArgs e)

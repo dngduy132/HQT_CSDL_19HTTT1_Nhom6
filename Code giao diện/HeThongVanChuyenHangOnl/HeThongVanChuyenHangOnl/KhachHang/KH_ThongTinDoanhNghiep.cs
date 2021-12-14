@@ -18,11 +18,6 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void KH_ThongTinDoanhNghiep_Load(object sender, EventArgs e)
         {
             dataGridViewThongTin.DataSource = GetAllThongTin().Tables[0];

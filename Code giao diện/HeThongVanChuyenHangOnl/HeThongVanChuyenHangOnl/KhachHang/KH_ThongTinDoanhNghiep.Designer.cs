@@ -56,7 +56,6 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             this.label1.Size = new System.Drawing.Size(353, 37);
             this.label1.TabIndex = 1;
             this.label1.Text = "Thông tin doanh nghiệp";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel1
             // 

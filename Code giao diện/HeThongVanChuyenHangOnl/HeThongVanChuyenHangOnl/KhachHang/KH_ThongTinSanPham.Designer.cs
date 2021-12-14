@@ -55,7 +55,6 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             this.comBoxMaDN.Name = "comBoxMaDN";
             this.comBoxMaDN.Size = new System.Drawing.Size(318, 24);
             this.comBoxMaDN.TabIndex = 1;
-            this.comBoxMaDN.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // dataGridViewThongTinSP
             // 

@@ -28,8 +28,10 @@ namespace HeThongVanChuyenHangOnl.KhachHang
 
         private void comBoxTenDN_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //string str = "Select Ten from DOANH_NGHIEP DN,  where MaKH = N'" + comboMaKhachHang.SelectedValue + "'";
-            //textTenKhachHang.Text = Function.GetFieldValues(str);
+            string str = "KH_XEM_TEN_SP_THEO_MADN N'"+comBoxTenDN.SelectedValue+"'";
+            
+            function.FillCombo(str, comBoxTenSP, "TEN_SP", "TEN_SP");
+            comBoxTenSP.SelectedIndex = -1;
         }
 
         private void LoadDataSL()
@@ -40,7 +42,7 @@ namespace HeThongVanChuyenHangOnl.KhachHang
         DataSet GetAllTimKiemSP()
         {
             DataSet data = new DataSet();
-            string query = "KH_TIM_SP_THEO_TENDN_TENSP N'" + comBoxTenDN.SelectedValue + "',N'" + textTenSP.Text + "'";
+            string query = "KH_TIM_SP_THEO_TENDN_TENSP N'" + comBoxTenDN.SelectedValue + "',N'" + comBoxTenSP.SelectedValue + "'";
             using (SqlConnection connection = new SqlConnection(conect_data.connectionString))
             {
                 connection.Open();
@@ -59,16 +61,25 @@ namespace HeThongVanChuyenHangOnl.KhachHang
                 comBoxTenDN.Focus();
                 return;
             }
-            if (textTenSP.Text.Trim().Length == 0)
+            if (comBoxTenSP.Text.Trim().Length == 0)
             {
                 MessageBox.Show("Bạn phải nhập tên sản phẩm cần tìm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                textTenSP.Focus();
+                comBoxTenSP.Focus();
                 return;
             }
-            string query = "KH_TIM_SP_THEO_TENDN_TENSP N'" + comBoxTenDN.SelectedValue + "',N'" + textTenSP.Text + "'";
+            string query = "KH_TIM_SP_THEO_TENDN_TENSP N'" + comBoxTenDN.SelectedValue + "',N'" + comBoxTenSP.SelectedValue + "'";
             function.RunSQL(query);
+            DataSet data = new DataSet();
+            using (SqlConnection connection = new SqlConnection(conect_data.connectionString))
+            {
+                connection.Open();
+                SqlDataAdapter dap = new SqlDataAdapter(query, connection);
+                dap.Fill(data);
+                connection.Close();
+            }
+            textKetQua.Text = data.Tables[0].Rows[0][0].ToString();
             LoadDataSL();
-            textKetQua.Text = GetAllTimKiemSP().Tables[0].Rows[0][0].ToString();
+            MessageBox.Show("Tìm kiếm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

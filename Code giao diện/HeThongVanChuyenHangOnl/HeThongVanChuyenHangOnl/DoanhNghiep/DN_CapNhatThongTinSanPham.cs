@@ -18,27 +18,10 @@ namespace HeThongVanChuyenHangOnl.DoanhNghiep
             InitializeComponent();
         }
 
-        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void DN_CapNhatThongTinSanPham_Load(object sender, EventArgs e)
         {
             function.FillCombo("SELECT MADN FROM DOANH_NGHIEP", comBoxMaDN, "MADN", "MADN");
-            comBoxMaDN.SelectedIndex = -1;
-            
-            
+            comBoxMaDN.SelectedIndex = -1;      
         }
 
         private void ResetValueCapNhat()
@@ -50,6 +33,7 @@ namespace HeThongVanChuyenHangOnl.DoanhNghiep
             textGiaSP.Text = "";
             textSoLuong.Text = "";
         }
+
         private void ResetValueXoa()
         {
             comBoxMaSP.Text = "";
@@ -57,12 +41,6 @@ namespace HeThongVanChuyenHangOnl.DoanhNghiep
             textGiaSP.Text = "";
             textSoLuong.Text = "";
         }
-
-        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
 
         private void comBoxMaSP_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -87,10 +65,8 @@ namespace HeThongVanChuyenHangOnl.DoanhNghiep
             if (comBoxMaDN.Text == "")
             {
                 comBoxMaCN.SelectedValue = "";
-
             }
             str = "Select MA_CN from CHI_NHANH where MaDN = N'" + comBoxMaDN.SelectedValue + "'";
-            //comBoxMaCN = function.GetFieldValues(str);
             function.FillCombo(str, comBoxMaCN, "MA_CN", "MA_CN");
             comBoxMaCN.SelectedIndex = -1;
         }
@@ -101,10 +77,8 @@ namespace HeThongVanChuyenHangOnl.DoanhNghiep
             if (comBoxMaCN.Text == "")
             {
                 comBoxMaSP.SelectedValue = "";
-
             }
             str = "SELECT MA_SP FROM CHINHANH_SANPHAM WHERE MA_CN = N'" + comBoxMaCN.SelectedValue + "'";
-      
             function.FillCombo(str, comBoxMaSP, "MA_SP", "MA_SP");
             comBoxMaSP.SelectedIndex = -1;
         }
@@ -136,22 +110,47 @@ namespace HeThongVanChuyenHangOnl.DoanhNghiep
                 textSoLuong.Focus();
                 return;
             }
-            query = "CAPNHAP_TTIN_SP N'" + comBoxMaSP.SelectedValue + "', N'" + textTenSP.Text + "', N'" + textGiaSP.Text + "', N'" + textSoLuong.Text + "'";
+            query = "CAPNHAT_TTIN_SP N'" + comBoxMaSP.SelectedValue + "', N'" + textTenSP.Text + "', N'" + textGiaSP.Text + "', N'" + textSoLuong.Text + "'";
 
             function.RunSQL(query);
             MessageBox.Show("Bạn đã cập nhật thành công sản phẩm ^.^", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             ResetValueCapNhat();
-         
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
-
+            if (comBoxMaSP.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Bạn phải chọn mã sản phẩm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                comBoxMaSP.Focus();
+                return;
+            }
+            if (textTenSP.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Bạn phải nhập tên sản phẩm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                textTenSP.Focus();
+                return;
+            }
+            if (textGiaSP.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Bạn phải nhập giá sản phẩm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                textGiaSP.Focus();
+                return;
+            }
+            if (textSoLuong.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Bạn phải nhập số lượng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                textSoLuong.Focus();
+                return;
+            }
+            string query = "CAPNHAT_TTIN_SP_ROLLBACK N'" + comBoxMaSP.SelectedValue + "', N'" + textTenSP.Text + "', N'" + textGiaSP.Text + "', N'" + textSoLuong.Text + "'";
+            function.RunSQL(query);
+            MessageBox.Show("Bạn đã cập nhật thành công sản phẩm ^.^", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            ResetValueCapNhat();
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            //string query = "CAPNHAP_TTIN_SP N'" + comBoxMaSP.SelectedValue + "', N'" + textTenSP.Text + "', N'" + textGiaSP.Text + "', N'" + textSoLuong.Text + "'";
             string query1 = "Delete FROM SAN_PHAM WHERE MA_SP = N'" + comBoxMaSP.SelectedValue + "'";
             string query2 = "Delete FROM CHINHANH_SANPHAM WHERE MA_SP = N'" + comBoxMaSP.SelectedValue + "'";
             function.RunSQL(query2);
@@ -159,7 +158,5 @@ namespace HeThongVanChuyenHangOnl.DoanhNghiep
             MessageBox.Show("Bạn đã xóa thành công sản phẩm ^.^", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             ResetValueXoa();
         }
-       
-        
     }
 }

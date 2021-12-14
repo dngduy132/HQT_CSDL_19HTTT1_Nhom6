@@ -19,11 +19,6 @@ namespace HeThongVanChuyenHangOnl.QuanTri
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void QT_XemThongTinDoanhNghiep_Load(object sender, EventArgs e)
         {
             dataGridViewXemThongTinDN.DataSource = GetAllXemThongTinDN().Tables[0];

@@ -67,7 +67,6 @@ namespace HeThongVanChuyenHangOnl.DoanhNghiep
             this.label2.Size = new System.Drawing.Size(596, 37);
             this.label2.TabIndex = 2;
             this.label2.Text = "Thống kê đơn đặt hàng của doanh nghiệp";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // dataGridViewDonHang
             // 
