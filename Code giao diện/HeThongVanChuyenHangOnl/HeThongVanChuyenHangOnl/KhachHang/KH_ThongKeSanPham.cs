@@ -30,24 +30,24 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             comBoxMaDN.SelectedIndex = -1;
         }
 
-        private void LoadDataSL()
-        {
-            dataGridViewTKSP.DataSource = GetAllThongKeSL().Tables[1];
-        }
+        //private void LoadDataSL()
+        //{
+        //    dataGridViewTKSP.DataSource = GetAllThongKeSL().Tables[1];
+        //}
 
-        DataSet GetAllThongKeSL()
-        {
-            DataSet data = new DataSet();
-            string query = "KH_THONGKE_SP_SLUONG N'" + comBoxMaDN.SelectedValue + "',N'" + textSoLuongSP.Text + "'";
-            using (SqlConnection connection = new SqlConnection(conect_data.connectionString))
-            {
-                connection.Open();
-                SqlDataAdapter dap = new SqlDataAdapter(query, connection);
-                dap.Fill(data);
-                connection.Close();
-            }
-            return data;
-        }
+        //DataSet GetAllThongKeSL()
+        //{
+        //    DataSet data = new DataSet();
+        //    string query = "KH_THONGKE_SP_SLUONG N'" + comBoxMaDN.SelectedValue + "',N'" + textSoLuongSP.Text + "'";
+        //    using (SqlConnection connection = new SqlConnection(conect_data.connectionString))
+        //    {
+        //        connection.Open();
+        //        SqlDataAdapter dap = new SqlDataAdapter(query, connection);
+        //        dap.Fill(data);
+        //        connection.Close();
+        //    }
+        //    return data;
+        //}
 
         private void btnTKSoLuong_Click(object sender, EventArgs e)
         {
@@ -63,11 +63,19 @@ namespace HeThongVanChuyenHangOnl.KhachHang
                 textSoLuongSP.Focus();
                 return;
             }
+            
             string query = "KH_THONGKE_SP_SLUONG N'" + comBoxMaDN.SelectedValue + "',N'" + textSoLuongSP.Text + "'";
             function.RunSQL(query);
-            LoadDataSL();
-            textKetQua.Text = GetAllThongKeSL().Tables[0].Rows[0][0].ToString();
- 
+            DataSet data = new DataSet();
+            using (SqlConnection connection = new SqlConnection(conect_data.connectionString))
+            {
+                connection.Open();
+                SqlDataAdapter dap = new SqlDataAdapter(query, connection);
+                dap.Fill(data);
+                connection.Close();
+            }
+            textKetQua.Text = data.Tables[0].Rows[0][0].ToString();
+            dataGridViewTKSP.DataSource = data.Tables[1];
         }
 
         private void LoadDataGia()
@@ -105,8 +113,17 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             }
             string query = "KH_THONGKE_SP_GIA N'" + comBoxMaDN.SelectedValue + "',N'" + textSoLuongSP.Text + "'";
             function.RunSQL(query);
-            LoadDataGia();
-            textKetQua.Text = GetAllThongKeSL().Tables[0].Rows[0][0].ToString();
+            DataSet data = new DataSet();
+            using (SqlConnection connection = new SqlConnection(conect_data.connectionString))
+            {
+                connection.Open();
+                SqlDataAdapter dap = new SqlDataAdapter(query, connection);
+                dap.Fill(data);
+                connection.Close();
+            }
+            textKetQua.Text = data.Tables[0].Rows[0][0].ToString();
+            dataGridViewTKSP.DataSource = data.Tables[1];
+            
 
         }
     }

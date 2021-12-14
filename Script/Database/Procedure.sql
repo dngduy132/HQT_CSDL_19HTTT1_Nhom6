@@ -102,6 +102,7 @@ CREATE OR ALTER PROCEDURE KH_THONGKE_SP_SLUONG
 	@SLUONG INT 
 )
 AS 
+BEGIN TRANSACTION
 	--Thống kê số lượng sản phẩm thỏa điều kiện 
 	SELECT COUNT(SP.MA_SP)
 	FROM  DOANH_NGHIEP  DN JOIN CHI_NHANH  CN
@@ -111,6 +112,8 @@ AS
 		  JOIN SAN_PHAM SP
 		  ON (CN_SP.MA_SP=SP.MA_SP)
 	WHERE DN.MADN=@MADN AND SP.SO_LUONG = @SLUONG
+
+	WAITFOR DELAY '00:00:05'
 
 	--Hiển thị thông tin sản phẩm thỏa điều kiện 
 	SELECT SP.MA_SP,SP.TEN_SP, SP.MO_TA, SP.SO_LUONG
@@ -122,7 +125,10 @@ AS
 		  ON (CN_SP.MA_SP=SP.MA_SP)
 	WHERE DN.MADN=@MADN AND SP.SO_LUONG = @SLUONG
 	ORDER BY SP.SO_LUONG DESC
+COMMIT TRANSACTION
 GO
+
+
 
  --Chức năng mua hàng
 CREATE OR ALTER PROCEDURE KH_MUA_HANG
@@ -136,59 +142,72 @@ CREATE OR ALTER PROCEDURE KH_MUA_HANG
 	@MASP CHAR(10)
 )
 AS 
-DECLARE @MAKV CHAR(10)
-SET @MAKV = (SELECT MA_KV FROM KHU_VUC WHERE TEN_KHU_VUC = @TENKV)
-	--Thêm mới một đơn đặt hàng  
-	INSERT INTO	dbo.DON_DAT_HANG
-	(
-	    MA_DON,
-	    MA_KV,
-	    MADN,
-	    MA_TX,
-	    MA_KH,
-	    NGAY_LAP,
-	    TINH_TRANG,
-	    TONG_TIEN_,
-	    PHI_SAN_PHAM,
-	    PHI_VAN_CHUYEN,
-	    HINH_THUC_THANH_TOAN
-	)
-	VALUES
-	(   @MADON,   -- MA_DON - char(10)
-	    @MAKV,   -- MA_KV - char(10)
-	    @MADN,   -- MADN - char(10)
-	    NULL, -- MA_TX - char(10)
-	    @MAKH,   -- MA_KH - char(10)
-	    GETDATE(), -- NGAY_LAP - date
-	    N'Chờ nhận đơn', -- TINH_TRANG - nvarchar(50)
-	    NULL, -- TONG_TIEN_ - bigint
-	    NULL, -- PHI_SAN_PHAM - int
-	    25000, -- PHI_VAN_CHUYEN - int
-	    @HINHTHUCTHANHTOAN  -- HINH_THUC_THANH_TOAN - nvarchar(50)
-	)
+BEGIN TRANSACTION
+	DECLARE @MAKV CHAR(10)
+	SET @MAKV = (SELECT MA_KV FROM KHU_VUC WHERE TEN_KHU_VUC = @TENKV)
+		--Thêm mới một đơn đặt hàng  
+		INSERT INTO	dbo.DON_DAT_HANG
+		(
+			MA_DON,
+			MA_KV,
+			MADN,
+			MA_TX,
+			MA_KH,
+			NGAY_LAP,
+			TINH_TRANG,
+			TONG_TIEN_,
+			PHI_SAN_PHAM,
+			PHI_VAN_CHUYEN,
+			HINH_THUC_THANH_TOAN
+		)
+		VALUES
+		(   @MADON,   -- MA_DON - char(10)
+			@MAKV,   -- MA_KV - char(10)
+			@MADN,   -- MADN - char(10)
+			NULL, -- MA_TX - char(10)
+			@MAKH,   -- MA_KH - char(10)
+			GETDATE(), -- NGAY_LAP - date
+			N'Chờ nhận đơn', -- TINH_TRANG - nvarchar(50)
+			NULL, -- TONG_TIEN_ - bigint
+			NULL, -- PHI_SAN_PHAM - int
+			25000, -- PHI_VAN_CHUYEN - int
+			@HINHTHUCTHANHTOAN  -- HINH_THUC_THANH_TOAN - nvarchar(50)
+		)
 
-	--Thêm mới chi tiết đơn hàng
-	DECLARE @GIA INT
-	SET @GIA = (SELECT GIA FROM dbo.SAN_PHAM WHERE MA_SP = @MASP)
-	INSERT INTO dbo.CT_DON_HANG
-	(
-		MA_SP,
-		MA_DON,
-		SO_LUONG,
-		GIA_BAN,
-		THANH_TIEN_
-	)
-	VALUES
-	(   @MASP,   -- MA_SP - char(10)
-	    @MADON,   -- MA_DON - char(10)
-	    @SOLUONG, -- SO_LUONG - int
-	    @GIA, -- GIA_BAN - int
-	    @SOLUONG * @GIA  -- THANH_TIEN_ - int
-	)
-
-	-- Update số lượng 
-	UPDATE SAN_PHAM SET SO_LUONG = SO_LUONG - @SOLUONG WHERE MA_SP = @MASP
+		--Thêm mới chi tiết đơn hàng
+		DECLARE @GIA INT
+		SET @GIA = (SELECT GIA FROM dbo.SAN_PHAM WHERE MA_SP = @MASP)
+		INSERT INTO dbo.CT_DON_HANG
+		(
+			MA_SP,
+			MA_DON,
+			SO_LUONG,
+			GIA_BAN,
+			THANH_TIEN_
+		)
+		VALUES
+		(   @MASP,   -- MA_SP - char(10)
+			@MADON,   -- MA_DON - char(10)
+			@SOLUONG, -- SO_LUONG - int
+			@GIA, -- GIA_BAN - int
+			@SOLUONG * @GIA  -- THANH_TIEN_ - int
+		)
+		DECLARE @SL INT
+		SET @SL = (SELECT SO_LUONG FROM dbo.SAN_PHAM WHERE MA_SP = @MASP)
+		IF @SL > 0
+		BEGIN	
+			WAITFOR DELAY '00:00:05'
+			UPDATE dbo.SAN_PHAM SET SO_LUONG = @SL - 1 WHERE MA_SP = @MASP
+		END 
+		ELSE 
+		BEGIN 
+			RAISERROR(N'Hết hàng',15,1)
+			ROLLBACK
+		END 
+COMMIT TRANSACTION
 GO
+
+
 
 --Phân hệ tài xế 
 --Chức năng xem danh sách đơn đặt hàng
@@ -221,9 +240,21 @@ GO
 	@MADH CHAR(10)
  )
  AS 
-	UPDATE DON_DAT_HANG
-    SET MA_TX=@MATX, TINH_TRANG = 'Đang lấy hàng'
-    WHERE MA_DON=@MADH
+ BEGIN TRANSACTION
+	IF(SELECT MA_TX FROM dbo.DON_DAT_HANG WHERE MA_DON= @MADH)  IS NULL
+	BEGIN	
+		WAITFOR DELAY '00:00:05'
+		UPDATE dbo.DON_DAT_HANG SET MA_TX = @MATX WHERE MA_DON = @MADH
+	END 
+	ELSE 
+	BEGIN 
+		RAISERROR(N'ĐƠN HÀNG ĐÃ ĐƯỢC NHẬN',15,1)
+		ROLLBACK
+	END 
+	--UPDATE DON_DAT_HANG
+ --   SET MA_TX=@MATX, TINH_TRANG = 'Đang lấy hàng'
+ --   WHERE MA_DON=@MADH
+COMMIT TRAN
 GO
 
 --Phân hệ doanh nghiệp
@@ -255,9 +286,9 @@ GO
 		UPDATE SAN_PHAM 
 		SET TEN_SP = @TENSP, SO_LUONG = @SOLUONG, GIA=@GIA
 		WHERE MA_SP=@MASP
-		WAITFOR DELAY '00:00:07'
+		--WAITFOR DELAY '00:00:07'
 		--ROLLBACK
-		COMMIT
+	COMMIT TRAN
  GO 
  EXEC CAPNHAP_TTIN_SP 'SP26049509', N'Ly uống trà', 500000, 1
  

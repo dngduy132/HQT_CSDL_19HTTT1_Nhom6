@@ -149,7 +149,7 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             Random rand1 = new Random();
             int num1 = rand1.Next(10000000, 99999999);
             string a = num1.ToString();
-            string n = "SP" + a;
+            string n = "HD" + a;
 
             if (comBoxMaKH.Text.Trim().Length == 0)
             {
