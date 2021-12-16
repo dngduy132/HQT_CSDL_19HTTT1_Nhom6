@@ -134,7 +134,7 @@ namespace HeThongVanChuyenHangOnl.KhachHang
                 textSoLuong.Focus();
                 return;
             }
-            query = "KH_MUA_HANG N'" + n + "', N'"+ comBoxKV.SelectedValue +"', N'" + comBoxMaDN.SelectedValue + "', N'" + comBoxMaKH.SelectedValue + "', N'" + comBoxHTTT.SelectedValue + "', N'" + textSoLuong.Text + "', N'" + comBoxMaSP.SelectedValue + "'";
+            query = "KH_MUA_HANG_DEADLOCK N'" + n + "', N'"+ comBoxKV.SelectedValue +"', N'" + comBoxMaDN.SelectedValue + "', N'" + comBoxMaKH.SelectedValue + "', N'" + comBoxHTTT.SelectedValue + "', N'" + textSoLuong.Text + "', N'" + comBoxMaSP.SelectedValue + "'";
             function.RunSQL(query);
             
             MessageBox.Show("Bạn đã đặt thành công sản phẩm ^.^", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);

@@ -57,7 +57,7 @@ namespace HeThongVanChuyenHangOnl.TaiXe
         private void btnNhanDonHang_Click(object sender, EventArgs e)
         {
             string query;
-            query = "TX_NHAN_DH N'" + comBoxMaTX.SelectedValue + "', N'" + comBoxMaDon.SelectedValue + "'";
+            query = "TX_NHAN_DH_DEADLOCK N'" + comBoxMaTX.SelectedValue + "', N'" + comBoxMaDon.SelectedValue + "'";
             function.RunSQL(query);
             loadData();
             MessageBox.Show("Bạn đã nhận đơn hàng thành công ^.^", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);

@@ -242,6 +242,83 @@ AS
 	COMMIT TRAN
 GO
 
+--Chức năng mua hàng có deadlock
+CREATE OR ALTER PROCEDURE KH_MUA_HANG_DEADLOCK
+( 
+	@MADON CHAR(10),
+	@TENKV NVARCHAR(50),
+	@MADN CHAR(10),
+	@MAKH CHAR(10),
+	@HINHTHUCTHANHTOAN NVARCHAR(50),
+	@SOLUONG INT,
+	@MASP CHAR(10)
+)
+AS 
+	BEGIN TRAN
+	SET TRAN ISOLATION LEVEL REPEATABLE READ
+		DECLARE @MAKV CHAR(10)
+		SET @MAKV = (SELECT MA_KV FROM KHU_VUC WHERE TEN_KHU_VUC = @TENKV)
+			--Thêm mới một đơn đặt hàng  
+			INSERT INTO	dbo.DON_DAT_HANG
+			(
+				MA_DON,
+				MA_KV,
+				MADN,
+				MA_TX,
+				MA_KH,
+				NGAY_LAP,
+				TINH_TRANG,
+				TONG_TIEN_,
+				PHI_SAN_PHAM,
+				PHI_VAN_CHUYEN,
+				HINH_THUC_THANH_TOAN
+			)
+			VALUES
+			(   @MADON,   -- MA_DON - char(10)
+				@MAKV,   -- MA_KV - char(10)
+				@MADN,   -- MADN - char(10)
+				NULL, -- MA_TX - char(10)
+				@MAKH,   -- MA_KH - char(10)
+				GETDATE(), -- NGAY_LAP - date
+				N'Chờ nhận đơn', -- TINH_TRANG - nvarchar(50)
+				NULL, -- TONG_TIEN_ - bigint
+				NULL, -- PHI_SAN_PHAM - int
+				25000, -- PHI_VAN_CHUYEN - int
+				@HINHTHUCTHANHTOAN  -- HINH_THUC_THANH_TOAN - nvarchar(50)
+			)
+
+			--Thêm mới chi tiết đơn hàng
+			DECLARE @GIA INT
+			SET @GIA = (SELECT GIA FROM dbo.SAN_PHAM WHERE MA_SP = @MASP)
+			INSERT INTO dbo.CT_DON_HANG
+			(
+				MA_SP,
+				MA_DON,
+				SO_LUONG,
+				GIA_BAN,
+				THANH_TIEN_
+			)
+			VALUES
+			(   @MASP,   -- MA_SP - char(10)
+				@MADON,   -- MA_DON - char(10)
+				@SOLUONG, -- SO_LUONG - int
+				@GIA, -- GIA_BAN - int
+				@SOLUONG * @GIA  -- THANH_TIEN_ - int
+			)
+			DECLARE @SL INT
+			SET @SL = (SELECT SO_LUONG FROM dbo.SAN_PHAM WHERE MA_SP = @MASP)
+			IF @SL > 0
+			BEGIN	
+				WAITFOR DELAY '00:00:02'
+				UPDATE dbo.SAN_PHAM SET SO_LUONG = @SL - @SOLUONG WHERE MA_SP = @MASP
+			END 
+			ELSE 
+			BEGIN 
+				RAISERROR(N'Hết hàng',15,1)
+				ROLLBACK
+			END 
+	COMMIT TRAN
+GO
 
 --Phân hệ tài xế 
 --Chức năng xem danh sách đơn đặt hàng
@@ -280,6 +357,28 @@ GO
  )
  AS 
 	BEGIN TRANSACTION
+		IF(SELECT MA_TX FROM dbo.DON_DAT_HANG WHERE MA_DON= @MADH)  IS NULL
+		BEGIN	
+			WAITFOR DELAY '00:00:05'
+			UPDATE dbo.DON_DAT_HANG SET MA_TX = @MATX WHERE MA_DON = @MADH
+		END 
+		ELSE 
+		BEGIN 
+			RAISERROR(N'ĐƠN HÀNG ĐÃ ĐƯỢC NHẬN',15,1)
+			ROLLBACK
+		END 
+	COMMIT TRAN
+GO
+
+--Nhận đơn hàng deadlock
+CREATE OR ALTER PROCEDURE TX_NHAN_DH_DEADLOCK
+ (
+	@MATX CHAR(10),
+	@MADH CHAR(10)
+ )
+ AS 
+	BEGIN TRANSACTION
+	SET TRAN ISOLATION LEVEL REPEATABLE READ
 		IF(SELECT MA_TX FROM dbo.DON_DAT_HANG WHERE MA_DON= @MADH)  IS NULL
 		BEGIN	
 			WAITFOR DELAY '00:00:05'
