@@ -117,36 +117,42 @@ namespace HeThongVanChuyenHangOnl
             this.KH_XemThongTinDoanhNghiep.Name = "KH_XemThongTinDoanhNghiep";
             this.KH_XemThongTinDoanhNghiep.Size = new System.Drawing.Size(342, 30);
             this.KH_XemThongTinDoanhNghiep.Text = "Xem thông tin doanh nghiệp";
+            this.KH_XemThongTinDoanhNghiep.Click += new System.EventHandler(this.XemThongTinDoanhNghiep_Click);
             // 
             // KH_XemThongTinSanPham
             // 
             this.KH_XemThongTinSanPham.Name = "KH_XemThongTinSanPham";
             this.KH_XemThongTinSanPham.Size = new System.Drawing.Size(342, 30);
             this.KH_XemThongTinSanPham.Text = "Xem thông tin sản phẩm";
+            this.KH_XemThongTinSanPham.Click += new System.EventHandler(this.XemThongTinSanPham_Click);
             // 
             // KH_TimKiemDoanhNghiep
             // 
             this.KH_TimKiemDoanhNghiep.Name = "KH_TimKiemDoanhNghiep";
             this.KH_TimKiemDoanhNghiep.Size = new System.Drawing.Size(342, 30);
             this.KH_TimKiemDoanhNghiep.Text = "Tìm kiếm doanh nghiệp";
+            this.KH_TimKiemDoanhNghiep.Click += new System.EventHandler(this.TimKiemDoanhNghiep_Click);
             // 
             // KH_TimKiemSanPham
             // 
             this.KH_TimKiemSanPham.Name = "KH_TimKiemSanPham";
             this.KH_TimKiemSanPham.Size = new System.Drawing.Size(342, 30);
             this.KH_TimKiemSanPham.Text = "Tìm kiếm sản phẩm";
+            this.KH_TimKiemSanPham.Click += new System.EventHandler(this.TimKiemSanPham_Click);
             // 
             // KH_ThongKeSanPham
             // 
             this.KH_ThongKeSanPham.Name = "KH_ThongKeSanPham";
             this.KH_ThongKeSanPham.Size = new System.Drawing.Size(342, 30);
             this.KH_ThongKeSanPham.Text = "Thống kê sản phẩm";
+            this.KH_ThongKeSanPham.Click += new System.EventHandler(this.ThongKeSanPham_Click);
             // 
             // KH_MuaHang
             // 
             this.KH_MuaHang.Name = "KH_MuaHang";
             this.KH_MuaHang.Size = new System.Drawing.Size(342, 30);
             this.KH_MuaHang.Text = "Mua hàng";
+            this.KH_MuaHang.Click += new System.EventHandler(this.MuaHang_Click);
             // 
             // doanhNghiệpToolStripMenuItem
             // 
@@ -164,18 +170,21 @@ namespace HeThongVanChuyenHangOnl
             this.DN_XemDanhSachDonDatHang.Name = "DN_XemDanhSachDonDatHang";
             this.DN_XemDanhSachDonDatHang.Size = new System.Drawing.Size(348, 30);
             this.DN_XemDanhSachDonDatHang.Text = "Thống kê đơn đặt hàng";
+            this.DN_XemDanhSachDonDatHang.Click += new System.EventHandler(this.ThongKeDonDatHang_Click);
             // 
             // cậpNhậtThôngTinSảnPhẩmToolStripMenuItem
             // 
             this.cậpNhậtThôngTinSảnPhẩmToolStripMenuItem.Name = "cậpNhậtThôngTinSảnPhẩmToolStripMenuItem";
             this.cậpNhậtThôngTinSảnPhẩmToolStripMenuItem.Size = new System.Drawing.Size(348, 30);
             this.cậpNhậtThôngTinSảnPhẩmToolStripMenuItem.Text = "Cập nhật thông tin sản phẩm";
+            this.cậpNhậtThôngTinSảnPhẩmToolStripMenuItem.Click += new System.EventHandler(this.CapNhatThongTinSanPham_Click);
             // 
             // thêmMớiSảnPhẩmToolStripMenuItem
             // 
             this.thêmMớiSảnPhẩmToolStripMenuItem.Name = "thêmMớiSảnPhẩmToolStripMenuItem";
             this.thêmMớiSảnPhẩmToolStripMenuItem.Size = new System.Drawing.Size(348, 30);
             this.thêmMớiSảnPhẩmToolStripMenuItem.Text = "Thêm mới sản phẩm";
+            this.thêmMớiSảnPhẩmToolStripMenuItem.Click += new System.EventHandler(this.ThemMoiSanPham_Click);
             // 
             // tàiXếToolStripMenuItem
             // 
@@ -191,6 +200,7 @@ namespace HeThongVanChuyenHangOnl
             this.TX_NhanGiaoHang.Name = "TX_NhanGiaoHang";
             this.TX_NhanGiaoHang.Size = new System.Drawing.Size(236, 30);
             this.TX_NhanGiaoHang.Text = "Nhận giao hàng";
+            this.TX_NhanGiaoHang.Click += new System.EventHandler(this.NhanGiaoHang_Click);
             // 
             // quảnTrịToolStripMenuItem
             // 
@@ -207,12 +217,14 @@ namespace HeThongVanChuyenHangOnl
             this.QT_XemThongTinDoanhNghiep.Name = "QT_XemThongTinDoanhNghiep";
             this.QT_XemThongTinDoanhNghiep.Size = new System.Drawing.Size(381, 30);
             this.QT_XemThongTinDoanhNghiep.Text = "Xem thông tin doanh nghiệp";
+            this.QT_XemThongTinDoanhNghiep.Click += new System.EventHandler(this.XemThongTinDoanhNghiep_Click);
             // 
             // CapNhatThongTinDoanhNghiep
             // 
             this.CapNhatThongTinDoanhNghiep.Name = "CapNhatThongTinDoanhNghiep";
             this.CapNhatThongTinDoanhNghiep.Size = new System.Drawing.Size(381, 30);
             this.CapNhatThongTinDoanhNghiep.Text = "Cập nhật thông tin doanh nghiệp";
+            this.CapNhatThongTinDoanhNghiep.Click += new System.EventHandler(this.CapNhatThongTinDoanhNghiep_Click);
             // 
             // nhânViênToolStripMenuItem
             // 
@@ -229,12 +241,14 @@ namespace HeThongVanChuyenHangOnl
             this.ChinhSuaThongTinDoanhNghiep.Name = "ChinhSuaThongTinDoanhNghiep";
             this.ChinhSuaThongTinDoanhNghiep.Size = new System.Drawing.Size(390, 30);
             this.ChinhSuaThongTinDoanhNghiep.Text = "Chỉnh sửa thông tin doanh nghiệp";
+            this.ChinhSuaThongTinDoanhNghiep.Click += new System.EventHandler(this.ChinhSuaThongTinDoanhNghiep_Click);
             // 
             // ChinhSuaThongTinHoaDon
             // 
             this.ChinhSuaThongTinHoaDon.Name = "ChinhSuaThongTinHoaDon";
             this.ChinhSuaThongTinHoaDon.Size = new System.Drawing.Size(390, 30);
             this.ChinhSuaThongTinHoaDon.Text = "Chỉnh sửa thông tin hợp đồng ";
+            this.ChinhSuaThongTinHoaDon.Click += new System.EventHandler(this.ChinhSuaThongTinHopDong_Click);
             // 
             // panel2
             // 

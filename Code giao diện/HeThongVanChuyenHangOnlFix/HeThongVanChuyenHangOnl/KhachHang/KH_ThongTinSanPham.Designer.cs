@@ -82,7 +82,7 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             // btn_Enter
             // 
             this.btn_Enter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(84)))), ((int)(((byte)(3)))));
-            this.btn_Enter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Enter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Enter.ForeColor = System.Drawing.Color.White;
             this.btn_Enter.Location = new System.Drawing.Point(592, 64);
             this.btn_Enter.Name = "btn_Enter";

@@ -108,7 +108,7 @@ namespace HeThongVanChuyenHangOnl.DoanhNghiep
             this.Enter_btn.ForeColor = System.Drawing.Color.White;
             this.Enter_btn.Location = new System.Drawing.Point(429, 66);
             this.Enter_btn.Name = "Enter_btn";
-            this.Enter_btn.Size = new System.Drawing.Size(75, 40);
+            this.Enter_btn.Size = new System.Drawing.Size(92, 40);
             this.Enter_btn.TabIndex = 6;
             this.Enter_btn.Text = "Enter";
             this.Enter_btn.UseVisualStyleBackColor = false;

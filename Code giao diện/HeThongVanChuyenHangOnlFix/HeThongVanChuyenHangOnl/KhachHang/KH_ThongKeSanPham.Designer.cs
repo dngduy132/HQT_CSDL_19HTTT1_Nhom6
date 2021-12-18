@@ -120,9 +120,9 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             this.btnTKSoLuong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(84)))), ((int)(((byte)(3)))));
             this.btnTKSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTKSoLuong.ForeColor = System.Drawing.Color.White;
-            this.btnTKSoLuong.Location = new System.Drawing.Point(494, 63);
+            this.btnTKSoLuong.Location = new System.Drawing.Point(413, 63);
             this.btnTKSoLuong.Name = "btnTKSoLuong";
-            this.btnTKSoLuong.Size = new System.Drawing.Size(200, 37);
+            this.btnTKSoLuong.Size = new System.Drawing.Size(281, 37);
             this.btnTKSoLuong.TabIndex = 7;
             this.btnTKSoLuong.Text = "Thống kê theo số lượng";
             this.btnTKSoLuong.UseVisualStyleBackColor = false;
@@ -170,9 +170,9 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             this.btnTKGia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(84)))), ((int)(((byte)(3)))));
             this.btnTKGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTKGia.ForeColor = System.Drawing.Color.White;
-            this.btnTKGia.Location = new System.Drawing.Point(494, 106);
+            this.btnTKGia.Location = new System.Drawing.Point(413, 106);
             this.btnTKGia.Name = "btnTKGia";
-            this.btnTKGia.Size = new System.Drawing.Size(200, 36);
+            this.btnTKGia.Size = new System.Drawing.Size(281, 36);
             this.btnTKGia.TabIndex = 11;
             this.btnTKGia.Text = "Thống kê theo giá";
             this.btnTKGia.UseVisualStyleBackColor = false;

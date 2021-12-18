@@ -77,15 +77,15 @@ namespace HeThongVanChuyenHangOnl
             frm.ShowDialog();
         }
 
-        private void XemDanhSachDonDatHang_Click(object sender, EventArgs e)
-        {
-            //DoanhNghiep.DN_XemDanhSachDonDatHang frm = new DoanhNghiep.DN_XemDanhSachDonDatHang();
-            //frm.MdiParent = this;
-            //frm.Name = "DN_XemDanhSachDonDatHang";
-            //frm.Show();
-            DoanhNghiep.DN_XemDanhSachDonDatHang frm = new DoanhNghiep.DN_XemDanhSachDonDatHang();
-            frm.ShowDialog();
-        }
+        //private void XemDanhSachDonDatHang_Click(object sender, EventArgs e)
+        //{
+        //    //DoanhNghiep.DN_XemDanhSachDonDatHang frm = new DoanhNghiep.DN_XemDanhSachDonDatHang();
+        //    //frm.MdiParent = this;
+        //    //frm.Name = "DN_XemDanhSachDonDatHang";
+        //    //frm.Show();
+        //    DoanhNghiep.DN_XemDanhSachDonDatHang frm = new DoanhNghiep.DN_XemDanhSachDonDatHang();
+        //    frm.ShowDialog();
+        //}
 
         private void CapNhatThongTinSanPham_Click(object sender, EventArgs e)
         {
@@ -147,24 +147,31 @@ namespace HeThongVanChuyenHangOnl
             frm.ShowDialog();
         }
 
-        private void ChinhSuaThongTinHoaDon_Click(object sender, EventArgs e)
-        {
-            //NhanVien.NV_CapNhatThongTinHopDong frm = new NhanVien.NV_CapNhatThongTinHopDong();
-            //frm.MdiParent = this;
-            //frm.Name = "NV_CapNhatThongTinHopDong";
-            //frm.Show();
-            NhanVien.NV_CapNhatThongTinHopDong frm = new NhanVien.NV_CapNhatThongTinHopDong();
-            frm.ShowDialog();
-        }
+        //private void ChinhSuaThongTinHoaDon_Click(object sender, EventArgs e)
+        //{
+        //    //NhanVien.NV_CapNhatThongTinHopDong frm = new NhanVien.NV_CapNhatThongTinHopDong();
+        //    //frm.MdiParent = this;
+        //    //frm.Name = "NV_CapNhatThongTinHopDong";
+        //    //frm.Show();
+        //    NhanVien.NV_CapNhatThongTinHopDong frm = new NhanVien.NV_CapNhatThongTinHopDong();
+        //    frm.ShowDialog();
+        //}
 
         private void Main_Load(object sender, EventArgs e)
         {
             function.Connect();
         }
 
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        private void ThongKeDonDatHang_Click(object sender, EventArgs e)
         {
+            DoanhNghiep.DN_XemDanhSachDonDatHang frm = new DoanhNghiep.DN_XemDanhSachDonDatHang();
+            frm.ShowDialog();
+        }
 
+        private void ChinhSuaThongTinHopDong_Click(object sender, EventArgs e)
+        {
+            NhanVien.NV_CapNhatThongTinHopDong frm = new NhanVien.NV_CapNhatThongTinHopDong();
+            frm.ShowDialog();
         }
     }
 }

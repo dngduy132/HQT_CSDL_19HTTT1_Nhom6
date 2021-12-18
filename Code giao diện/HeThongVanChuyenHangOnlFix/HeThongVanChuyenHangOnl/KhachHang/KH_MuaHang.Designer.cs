@@ -100,7 +100,7 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             this.comBoxHTTT.FormattingEnabled = true;
             this.comBoxHTTT.Location = new System.Drawing.Point(430, 71);
             this.comBoxHTTT.Name = "comBoxHTTT";
-            this.comBoxHTTT.Size = new System.Drawing.Size(121, 28);
+            this.comBoxHTTT.Size = new System.Drawing.Size(139, 28);
             this.comBoxHTTT.TabIndex = 4;
             // 
             // label3
@@ -127,9 +127,9 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             // 
             this.comBoxMaKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comBoxMaKH.FormattingEnabled = true;
-            this.comBoxMaKH.Location = new System.Drawing.Point(148, 71);
+            this.comBoxMaKH.Location = new System.Drawing.Point(157, 71);
             this.comBoxMaKH.Name = "comBoxMaKH";
-            this.comBoxMaKH.Size = new System.Drawing.Size(121, 28);
+            this.comBoxMaKH.Size = new System.Drawing.Size(136, 28);
             this.comBoxMaKH.TabIndex = 8;
             // 
             // label5
@@ -149,7 +149,7 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             this.comBoxKV.FormattingEnabled = true;
             this.comBoxKV.Location = new System.Drawing.Point(430, 110);
             this.comBoxKV.Name = "comBoxKV";
-            this.comBoxKV.Size = new System.Drawing.Size(121, 28);
+            this.comBoxKV.Size = new System.Drawing.Size(139, 28);
             this.comBoxKV.TabIndex = 10;
             // 
             // btnDatHang
@@ -180,7 +180,7 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             this.textSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textSoLuong.Location = new System.Drawing.Point(430, 152);
             this.textSoLuong.Name = "textSoLuong";
-            this.textSoLuong.Size = new System.Drawing.Size(121, 27);
+            this.textSoLuong.Size = new System.Drawing.Size(139, 27);
             this.textSoLuong.TabIndex = 17;
             this.textSoLuong.TextChanged += new System.EventHandler(this.textSoLuong_TextChanged);
             // 
@@ -198,9 +198,9 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             // 
             this.comBoxMaDN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comBoxMaDN.FormattingEnabled = true;
-            this.comBoxMaDN.Location = new System.Drawing.Point(148, 113);
+            this.comBoxMaDN.Location = new System.Drawing.Point(157, 115);
             this.comBoxMaDN.Name = "comBoxMaDN";
-            this.comBoxMaDN.Size = new System.Drawing.Size(121, 28);
+            this.comBoxMaDN.Size = new System.Drawing.Size(136, 28);
             this.comBoxMaDN.TabIndex = 19;
             this.comBoxMaDN.SelectedIndexChanged += new System.EventHandler(this.comBoxMaDN_SelectedIndexChanged);
             // 
@@ -208,9 +208,9 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             // 
             this.comBoxMaSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comBoxMaSP.FormattingEnabled = true;
-            this.comBoxMaSP.Location = new System.Drawing.Point(148, 152);
+            this.comBoxMaSP.Location = new System.Drawing.Point(157, 152);
             this.comBoxMaSP.Name = "comBoxMaSP";
-            this.comBoxMaSP.Size = new System.Drawing.Size(121, 28);
+            this.comBoxMaSP.Size = new System.Drawing.Size(136, 28);
             this.comBoxMaSP.TabIndex = 20;
             // 
             // bntXemSP

@@ -58,17 +58,18 @@ namespace HeThongVanChuyenHangOnl.TaiXe
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(86, 82);
+            this.label2.Location = new System.Drawing.Point(44, 78);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(77, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Mã tài xế";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // comBoxMaTX
             // 
             this.comBoxMaTX.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comBoxMaTX.FormattingEnabled = true;
-            this.comBoxMaTX.Location = new System.Drawing.Point(187, 75);
+            this.comBoxMaTX.Location = new System.Drawing.Point(156, 74);
             this.comBoxMaTX.Name = "comBoxMaTX";
             this.comBoxMaTX.Size = new System.Drawing.Size(174, 28);
             this.comBoxMaTX.TabIndex = 2;
@@ -78,7 +79,7 @@ namespace HeThongVanChuyenHangOnl.TaiXe
             this.btnTimDonHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(84)))), ((int)(((byte)(3)))));
             this.btnTimDonHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimDonHang.ForeColor = System.Drawing.Color.White;
-            this.btnTimDonHang.Location = new System.Drawing.Point(187, 112);
+            this.btnTimDonHang.Location = new System.Drawing.Point(156, 112);
             this.btnTimDonHang.Name = "btnTimDonHang";
             this.btnTimDonHang.Size = new System.Drawing.Size(174, 43);
             this.btnTimDonHang.TabIndex = 3;
@@ -91,7 +92,7 @@ namespace HeThongVanChuyenHangOnl.TaiXe
             this.btnNhanDonHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(84)))), ((int)(((byte)(3)))));
             this.btnNhanDonHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNhanDonHang.ForeColor = System.Drawing.Color.White;
-            this.btnNhanDonHang.Location = new System.Drawing.Point(532, 112);
+            this.btnNhanDonHang.Location = new System.Drawing.Point(553, 112);
             this.btnNhanDonHang.Name = "btnNhanDonHang";
             this.btnNhanDonHang.Size = new System.Drawing.Size(189, 43);
             this.btnNhanDonHang.TabIndex = 4;
@@ -132,7 +133,7 @@ namespace HeThongVanChuyenHangOnl.TaiXe
             // 
             this.comBoxMaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comBoxMaDon.FormattingEnabled = true;
-            this.comBoxMaDon.Location = new System.Drawing.Point(532, 79);
+            this.comBoxMaDon.Location = new System.Drawing.Point(553, 75);
             this.comBoxMaDon.Name = "comBoxMaDon";
             this.comBoxMaDon.Size = new System.Drawing.Size(189, 28);
             this.comBoxMaDon.TabIndex = 7;
