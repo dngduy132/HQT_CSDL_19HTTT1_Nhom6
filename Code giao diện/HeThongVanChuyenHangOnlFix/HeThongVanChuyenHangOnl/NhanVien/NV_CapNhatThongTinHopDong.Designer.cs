@@ -148,7 +148,7 @@ namespace HeThongVanChuyenHangOnl.NhanVien
             // textThoiGianBD
             // 
             this.textThoiGianBD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textThoiGianBD.Location = new System.Drawing.Point(597, 176);
+            this.textThoiGianBD.Location = new System.Drawing.Point(597, 127);
             this.textThoiGianBD.Name = "textThoiGianBD";
             this.textThoiGianBD.Size = new System.Drawing.Size(155, 27);
             this.textThoiGianBD.TabIndex = 10;
@@ -156,7 +156,7 @@ namespace HeThongVanChuyenHangOnl.NhanVien
             // textThoiGianKT
             // 
             this.textThoiGianKT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textThoiGianKT.Location = new System.Drawing.Point(597, 124);
+            this.textThoiGianKT.Location = new System.Drawing.Point(597, 176);
             this.textThoiGianKT.Name = "textThoiGianKT";
             this.textThoiGianKT.Size = new System.Drawing.Size(155, 27);
             this.textThoiGianKT.TabIndex = 11;
