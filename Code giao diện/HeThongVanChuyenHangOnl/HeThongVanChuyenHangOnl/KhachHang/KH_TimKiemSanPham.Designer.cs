@@ -29,6 +29,8 @@ namespace HeThongVanChuyenHangOnl.KhachHang
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KH_TimKiemSanPham));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -101,6 +103,14 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             // 
             this.dataGridViewTimSP.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(243)))), ((int)(((byte)(224)))));
             this.dataGridViewTimSP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Coral;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTimSP.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewTimSP.Location = new System.Drawing.Point(12, 154);
             this.dataGridViewTimSP.Name = "dataGridViewTimSP";
             this.dataGridViewTimSP.RowHeadersWidth = 51;
@@ -161,6 +171,7 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             this.Controls.Add(this.comBoxTenDN);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "KH_TimKiemSanPham";
             this.Text = "KH_TimKiemSanPham";
             this.Load += new System.EventHandler(this.KH_TimKiemSanPham_Load);

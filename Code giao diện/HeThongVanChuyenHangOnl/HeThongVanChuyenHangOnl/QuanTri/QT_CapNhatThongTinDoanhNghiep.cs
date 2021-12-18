@@ -72,5 +72,10 @@ namespace HeThongVanChuyenHangOnl.QuanTri
             }
             return data;
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

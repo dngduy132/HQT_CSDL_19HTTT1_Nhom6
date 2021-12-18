@@ -49,6 +49,11 @@ namespace HeThongVanChuyenHangOnl.NhanVien
             textNguoiDaiDien.Text = function.GetFieldValues(sql);
             string str = "SELECT TEN_DN FROM DOANH_NGHIEP WHERE MADN = N'" + comBoxMaDN.SelectedValue + "'";
             textTenDN.Text = function.GetFieldValues(str);
-        }        
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

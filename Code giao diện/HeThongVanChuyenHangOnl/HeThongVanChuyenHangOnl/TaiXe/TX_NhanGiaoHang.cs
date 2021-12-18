@@ -61,6 +61,11 @@ namespace HeThongVanChuyenHangOnl.TaiXe
             function.RunSQL(query);
             loadData();
             MessageBox.Show("Bạn đã nhận đơn hàng thành công ^.^", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }        
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -29,6 +29,8 @@ namespace HeThongVanChuyenHangOnl.KhachHang
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KH_MuaHang));
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridMuaSP = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
@@ -68,6 +70,14 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             // 
             this.dataGridMuaSP.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(243)))), ((int)(((byte)(224)))));
             this.dataGridMuaSP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Coral;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridMuaSP.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridMuaSP.Location = new System.Drawing.Point(12, 198);
             this.dataGridMuaSP.Name = "dataGridMuaSP";
             this.dataGridMuaSP.RowHeadersWidth = 51;
@@ -280,6 +290,7 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             this.Controls.Add(this.comBoxHTTT);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridMuaSP);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "KH_MuaHang";
             this.Text = "KH_MuaHang";
             this.Load += new System.EventHandler(this.KH_MuaHang_Load);

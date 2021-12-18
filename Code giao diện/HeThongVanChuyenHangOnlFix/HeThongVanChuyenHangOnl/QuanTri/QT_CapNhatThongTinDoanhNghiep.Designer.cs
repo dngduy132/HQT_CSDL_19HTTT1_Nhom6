@@ -29,59 +29,75 @@ namespace HeThongVanChuyenHangOnl.QuanTri
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QT_CapNhatThongTinDoanhNghiep));
             this.comBoxMaDN = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnCapNhat = new System.Windows.Forms.Button();
             this.dataGridViewCapNhatThongTinDN = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.comBoxQuan = new System.Windows.Forms.ComboBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCapNhatThongTinDN)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // comBoxMaDN
             // 
+            this.comBoxMaDN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comBoxMaDN.FormattingEnabled = true;
-            this.comBoxMaDN.Location = new System.Drawing.Point(183, 61);
+            this.comBoxMaDN.Location = new System.Drawing.Point(298, 63);
             this.comBoxMaDN.Name = "comBoxMaDN";
-            this.comBoxMaDN.Size = new System.Drawing.Size(160, 24);
+            this.comBoxMaDN.Size = new System.Drawing.Size(160, 28);
             this.comBoxMaDN.TabIndex = 1;
             this.comBoxMaDN.SelectedIndexChanged += new System.EventHandler(this.comBoxMaDN_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 61);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(112, 71);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(118, 17);
+            this.label1.Size = new System.Drawing.Size(136, 20);
             this.label1.TabIndex = 3;
             this.label1.Text = "Mã doanh nghiệp";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(21, 102);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(152, 105);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 17);
+            this.label2.Size = new System.Drawing.Size(49, 20);
             this.label2.TabIndex = 4;
             this.label2.Text = "Quận";
             // 
             // btnCapNhat
             // 
-            this.btnCapNhat.Location = new System.Drawing.Point(633, 73);
+            this.btnCapNhat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(84)))), ((int)(((byte)(3)))));
+            this.btnCapNhat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCapNhat.ForeColor = System.Drawing.Color.White;
+            this.btnCapNhat.Location = new System.Drawing.Point(559, 71);
             this.btnCapNhat.Name = "btnCapNhat";
-            this.btnCapNhat.Size = new System.Drawing.Size(107, 34);
+            this.btnCapNhat.Size = new System.Drawing.Size(141, 44);
             this.btnCapNhat.TabIndex = 6;
             this.btnCapNhat.Text = "Cập nhật";
-            this.btnCapNhat.UseVisualStyleBackColor = true;
+            this.btnCapNhat.UseVisualStyleBackColor = false;
             this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
             // 
             // dataGridViewCapNhatThongTinDN
             // 
-            this.dataGridViewCapNhatThongTinDN.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.dataGridViewCapNhatThongTinDN.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(243)))), ((int)(((byte)(224)))));
             this.dataGridViewCapNhatThongTinDN.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Coral;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewCapNhatThongTinDN.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewCapNhatThongTinDN.Location = new System.Drawing.Point(24, 144);
             this.dataGridViewCapNhatThongTinDN.Name = "dataGridViewCapNhatThongTinDN";
             this.dataGridViewCapNhatThongTinDN.RowHeadersWidth = 51;
@@ -93,41 +109,46 @@ namespace HeThongVanChuyenHangOnl.QuanTri
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(160, 9);
+            this.label3.Location = new System.Drawing.Point(176, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(479, 37);
             this.label3.TabIndex = 8;
             this.label3.Text = "Cập nhật thông tin doanh nghiệp";
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 55);
-            this.panel1.TabIndex = 9;
-            // 
             // comBoxQuan
             // 
+            this.comBoxQuan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comBoxQuan.FormattingEnabled = true;
-            this.comBoxQuan.Location = new System.Drawing.Point(183, 102);
+            this.comBoxQuan.Location = new System.Drawing.Point(298, 102);
             this.comBoxQuan.Name = "comBoxQuan";
-            this.comBoxQuan.Size = new System.Drawing.Size(160, 24);
+            this.comBoxQuan.Size = new System.Drawing.Size(160, 28);
             this.comBoxQuan.TabIndex = 10;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(147)))), ((int)(((byte)(0)))));
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.ForeColor = System.Drawing.Color.White;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(800, 57);
+            this.panel1.TabIndex = 15;
             // 
             // QT_CapNhatThongTinDoanhNghiep
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(243)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.comBoxQuan);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.comBoxQuan);
             this.Controls.Add(this.dataGridViewCapNhatThongTinDN);
             this.Controls.Add(this.btnCapNhat);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comBoxMaDN);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "QT_CapNhatThongTinDoanhNghiep";
             this.Text = "QT_CapNhatThongTinDoanhNghiep";
             this.Load += new System.EventHandler(this.QT_CapNhatThongTinDoanhNghiep_Load);
@@ -146,7 +167,7 @@ namespace HeThongVanChuyenHangOnl.QuanTri
         private System.Windows.Forms.Button btnCapNhat;
         private System.Windows.Forms.DataGridView dataGridViewCapNhatThongTinDN;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox comBoxQuan;
+        private System.Windows.Forms.Panel panel1;
     }
 }

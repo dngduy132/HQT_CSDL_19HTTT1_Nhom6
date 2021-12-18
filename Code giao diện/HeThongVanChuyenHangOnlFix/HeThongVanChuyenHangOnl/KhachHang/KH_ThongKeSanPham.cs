@@ -120,5 +120,15 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             LoadDataGia();
             MessageBox.Show("Đã thống kê xong", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

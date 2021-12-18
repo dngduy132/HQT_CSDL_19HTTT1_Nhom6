@@ -29,6 +29,8 @@ namespace HeThongVanChuyenHangOnl.KhachHang
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KH_TimKiemDoanhNghiep));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.comBoxTenDN = new System.Windows.Forms.ComboBox();
@@ -85,6 +87,14 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             // 
             this.dataGridViewTimKiemDN.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(243)))), ((int)(((byte)(224)))));
             this.dataGridViewTimKiemDN.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Coral;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTimKiemDN.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewTimKiemDN.Location = new System.Drawing.Point(12, 145);
             this.dataGridViewTimKiemDN.Name = "dataGridViewTimKiemDN";
             this.dataGridViewTimKiemDN.RowHeadersWidth = 51;
@@ -159,6 +169,7 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             this.Controls.Add(this.comBoxTenDN);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "KH_TimKiemDoanhNghiep";
             this.Text = "KH_TimKiemDoanhNghiep";
             this.Load += new System.EventHandler(this.KH_TimKiemDoanhNghiep_Load);

@@ -29,6 +29,7 @@ namespace HeThongVanChuyenHangOnl.DoanhNghiep
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DN_CapNhatThongTinSanPham));
             this.label1 = new System.Windows.Forms.Label();
             this.comBoxMaDN = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -248,6 +249,7 @@ namespace HeThongVanChuyenHangOnl.DoanhNghiep
             this.Controls.Add(this.label2);
             this.Controls.Add(this.comBoxMaDN);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DN_CapNhatThongTinSanPham";
             this.Text = "DN_CapNhatThongTinSanPham";
             this.Load += new System.EventHandler(this.DN_CapNhatThongTinSanPham_Load);
