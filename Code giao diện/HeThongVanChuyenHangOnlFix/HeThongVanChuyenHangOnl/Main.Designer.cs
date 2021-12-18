@@ -211,7 +211,7 @@ namespace HeThongVanChuyenHangOnl
             // 
             this.ChinhSuaThongTinHoaDon.Name = "ChinhSuaThongTinHoaDon";
             this.ChinhSuaThongTinHoaDon.Size = new System.Drawing.Size(316, 26);
-            this.ChinhSuaThongTinHoaDon.Text = "Chỉnh sửa thông tin hóa đơn ";
+            this.ChinhSuaThongTinHoaDon.Text = "Chỉnh sửa thông tin hợp đồng ";
             this.ChinhSuaThongTinHoaDon.Click += new System.EventHandler(this.ChinhSuaThongTinHoaDon_Click);
             // 
             // Main

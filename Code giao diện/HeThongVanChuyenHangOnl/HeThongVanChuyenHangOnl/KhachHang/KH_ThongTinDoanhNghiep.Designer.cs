@@ -32,26 +32,28 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             this.dataGridViewThongTin = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewThongTin)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridViewThongTin
             // 
-            this.dataGridViewThongTin.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dataGridViewThongTin.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(243)))), ((int)(((byte)(224)))));
             this.dataGridViewThongTin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewThongTin.Location = new System.Drawing.Point(13, 73);
+            this.dataGridViewThongTin.Location = new System.Drawing.Point(0, 63);
             this.dataGridViewThongTin.Name = "dataGridViewThongTin";
             this.dataGridViewThongTin.RowHeadersWidth = 51;
             this.dataGridViewThongTin.RowTemplate.Height = 24;
-            this.dataGridViewThongTin.Size = new System.Drawing.Size(775, 365);
+            this.dataGridViewThongTin.Size = new System.Drawing.Size(800, 385);
             this.dataGridViewThongTin.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(217, 18);
+            this.label1.Location = new System.Drawing.Point(216, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(353, 37);
             this.label1.TabIndex = 1;
@@ -59,12 +61,23 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 67);
             this.panel1.TabIndex = 2;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(147)))), ((int)(((byte)(0)))));
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.ForeColor = System.Drawing.Color.White;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(800, 57);
+            this.panel2.TabIndex = 18;
             // 
             // KH_ThongTinDoanhNghiep
             // 
@@ -78,7 +91,8 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             this.Load += new System.EventHandler(this.KH_ThongTinDoanhNghiep_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewThongTin)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -88,5 +102,6 @@ namespace HeThongVanChuyenHangOnl.KhachHang
         private System.Windows.Forms.DataGridView dataGridViewThongTin;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
     }
 }

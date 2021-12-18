@@ -35,51 +35,55 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             this.comBoxQuan = new System.Windows.Forms.ComboBox();
             this.dataGridViewTimKiemDN = new System.Windows.Forms.DataGridView();
             this.btnTim = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.textKetQua = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTimKiemDN)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 69);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(48, 65);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 17);
+            this.label1.Size = new System.Drawing.Size(141, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tên doanh nghiệp";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 102);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(88, 109);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 17);
+            this.label2.Size = new System.Drawing.Size(49, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Quận";
             // 
             // comBoxTenDN
             // 
+            this.comBoxTenDN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comBoxTenDN.FormattingEnabled = true;
-            this.comBoxTenDN.Location = new System.Drawing.Point(139, 66);
+            this.comBoxTenDN.Location = new System.Drawing.Point(213, 62);
             this.comBoxTenDN.Name = "comBoxTenDN";
-            this.comBoxTenDN.Size = new System.Drawing.Size(182, 24);
+            this.comBoxTenDN.Size = new System.Drawing.Size(182, 28);
             this.comBoxTenDN.TabIndex = 2;
             // 
             // comBoxQuan
             // 
+            this.comBoxQuan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comBoxQuan.FormattingEnabled = true;
-            this.comBoxQuan.Location = new System.Drawing.Point(139, 102);
+            this.comBoxQuan.Location = new System.Drawing.Point(213, 101);
             this.comBoxQuan.Name = "comBoxQuan";
-            this.comBoxQuan.Size = new System.Drawing.Size(182, 24);
+            this.comBoxQuan.Size = new System.Drawing.Size(182, 28);
             this.comBoxQuan.TabIndex = 2;
             // 
             // dataGridViewTimKiemDN
             // 
-            this.dataGridViewTimKiemDN.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dataGridViewTimKiemDN.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(243)))), ((int)(((byte)(224)))));
             this.dataGridViewTimKiemDN.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewTimKiemDN.Location = new System.Drawing.Point(12, 145);
             this.dataGridViewTimKiemDN.Name = "dataGridViewTimKiemDN";
@@ -90,28 +94,22 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             // 
             // btnTim
             // 
-            this.btnTim.Location = new System.Drawing.Point(504, 69);
+            this.btnTim.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(84)))), ((int)(((byte)(3)))));
+            this.btnTim.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTim.ForeColor = System.Drawing.Color.White;
+            this.btnTim.Location = new System.Drawing.Point(604, 61);
             this.btnTim.Name = "btnTim";
-            this.btnTim.Size = new System.Drawing.Size(75, 23);
+            this.btnTim.Size = new System.Drawing.Size(100, 35);
             this.btnTim.TabIndex = 4;
             this.btnTim.Text = "Tìm";
-            this.btnTim.UseVisualStyleBackColor = true;
+            this.btnTim.UseVisualStyleBackColor = false;
             this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 56);
-            this.panel1.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(206, 9);
+            this.label3.Location = new System.Drawing.Point(228, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(349, 37);
             this.label3.TabIndex = 0;
@@ -120,27 +118,41 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(411, 105);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(522, 105);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 17);
+            this.label4.Size = new System.Drawing.Size(66, 20);
             this.label4.TabIndex = 6;
             this.label4.Text = "Kết quả";
             // 
             // textKetQua
             // 
-            this.textKetQua.Location = new System.Drawing.Point(504, 103);
+            this.textKetQua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textKetQua.Location = new System.Drawing.Point(604, 102);
             this.textKetQua.Name = "textKetQua";
-            this.textKetQua.Size = new System.Drawing.Size(100, 22);
+            this.textKetQua.Size = new System.Drawing.Size(100, 27);
             this.textKetQua.TabIndex = 7;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(147)))), ((int)(((byte)(0)))));
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.ForeColor = System.Drawing.Color.White;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(800, 57);
+            this.panel2.TabIndex = 19;
             // 
             // KH_TimKiemDoanhNghiep
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(243)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.textKetQua);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnTim);
             this.Controls.Add(this.dataGridViewTimKiemDN);
             this.Controls.Add(this.comBoxQuan);
@@ -151,8 +163,8 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             this.Text = "KH_TimKiemDoanhNghiep";
             this.Load += new System.EventHandler(this.KH_TimKiemDoanhNghiep_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTimKiemDN)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,9 +178,9 @@ namespace HeThongVanChuyenHangOnl.KhachHang
         private System.Windows.Forms.ComboBox comBoxQuan;
         private System.Windows.Forms.DataGridView dataGridViewTimKiemDN;
         private System.Windows.Forms.Button btnTim;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textKetQua;
+        private System.Windows.Forms.Panel panel2;
     }
 }

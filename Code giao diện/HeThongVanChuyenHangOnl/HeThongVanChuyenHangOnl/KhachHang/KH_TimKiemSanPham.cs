@@ -81,5 +81,10 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             LoadDataSL();
             MessageBox.Show("Tìm kiếm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -20,7 +20,7 @@ namespace HeThongVanChuyenHangOnl.DoanhNghiep
 
         private void loadData()
         {
-            dataGridViewDonHang.DataSource = GetAllDonDatHang().Tables[1];
+            dataGridViewDonHang.DataSource = GetAllDonDatHang().Tables[2];
         }
 
         private void DN_XemDanhSachDonDatHang_Load(object sender, EventArgs e)
@@ -63,7 +63,7 @@ namespace HeThongVanChuyenHangOnl.DoanhNghiep
                 dap.Fill(data);
                 connection.Close();
             }
-            slDonDatHang_tb.Text = data.Tables[0].Rows[0][0].ToString();
+            slDonDatHang_tb.Text = data.Tables[1].Rows[0][0].ToString();
             loadData();
             MessageBox.Show("Thống kê thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }

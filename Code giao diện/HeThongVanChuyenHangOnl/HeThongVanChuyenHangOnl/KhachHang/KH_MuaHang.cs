@@ -152,5 +152,15 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             tt = sl * gia;
             textTongTien.Text = tt.ToString();
         }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comBoxMaKH_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

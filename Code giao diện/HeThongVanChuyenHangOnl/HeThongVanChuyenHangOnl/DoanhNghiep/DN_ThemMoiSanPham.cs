@@ -96,5 +96,10 @@ namespace HeThongVanChuyenHangOnl.DoanhNghiep
             MessageBox.Show("Bạn đã thêm thành công sản phẩm ^.^", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             ResetValueCapNhat();
         }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -158,5 +158,10 @@ namespace HeThongVanChuyenHangOnl.DoanhNghiep
             MessageBox.Show("Bạn đã xóa thành công sản phẩm ^.^", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             ResetValueXoa();
         }
+
+        private void textSoLuong_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
