@@ -63,7 +63,7 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(74, 75);
+            this.label2.Location = new System.Drawing.Point(40, 75);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(136, 20);
             this.label2.TabIndex = 1;
@@ -73,7 +73,7 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(74, 116);
+            this.label3.Location = new System.Drawing.Point(40, 115);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(152, 20);
             this.label3.TabIndex = 2;
@@ -84,7 +84,7 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(74, 153);
+            this.label4.Location = new System.Drawing.Point(40, 157);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(113, 20);
             this.label4.TabIndex = 3;
@@ -94,25 +94,25 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             // 
             this.comBoxMaDN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comBoxMaDN.FormattingEnabled = true;
-            this.comBoxMaDN.Location = new System.Drawing.Point(251, 72);
+            this.comBoxMaDN.Location = new System.Drawing.Point(209, 72);
             this.comBoxMaDN.Name = "comBoxMaDN";
-            this.comBoxMaDN.Size = new System.Drawing.Size(121, 28);
+            this.comBoxMaDN.Size = new System.Drawing.Size(163, 28);
             this.comBoxMaDN.TabIndex = 4;
             // 
             // textSoLuongSP
             // 
             this.textSoLuongSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textSoLuongSP.Location = new System.Drawing.Point(251, 112);
+            this.textSoLuongSP.Location = new System.Drawing.Point(209, 112);
             this.textSoLuongSP.Name = "textSoLuongSP";
-            this.textSoLuongSP.Size = new System.Drawing.Size(121, 27);
+            this.textSoLuongSP.Size = new System.Drawing.Size(163, 27);
             this.textSoLuongSP.TabIndex = 5;
             // 
             // textGiaSP
             // 
             this.textGiaSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textGiaSP.Location = new System.Drawing.Point(251, 150);
+            this.textGiaSP.Location = new System.Drawing.Point(209, 150);
             this.textGiaSP.Name = "textGiaSP";
-            this.textGiaSP.Size = new System.Drawing.Size(121, 27);
+            this.textGiaSP.Size = new System.Drawing.Size(163, 27);
             this.textGiaSP.TabIndex = 6;
             // 
             // btnTKSoLuong
