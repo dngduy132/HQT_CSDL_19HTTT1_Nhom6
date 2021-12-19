@@ -56,5 +56,6 @@ namespace HeThongVanChuyenHangOnl.NhanVien
             function.RunSQL(query);
             MessageBox.Show("Bạn đã cập nhật thông tin của doanh nghiệp thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
     }
 }
