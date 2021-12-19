@@ -28,6 +28,8 @@ create user NV1 for login NhanVienLogin1
 exec sp_addrolemember 'NhanVienRole', 'NV1'
 
 grant select on HOP_DONG to NhanVienRole
+grant update on HOP_DONG(NGUOI_DAI_DIEN) to NhanVienRole
+grant update on DOANH_NGHIEP(NGUOI_DAI_DIEN) to NhanVienRole
 
 -- Phân quyền tài xế, quản trị: Đặng Nguyễn Duy
 --Tài xế
