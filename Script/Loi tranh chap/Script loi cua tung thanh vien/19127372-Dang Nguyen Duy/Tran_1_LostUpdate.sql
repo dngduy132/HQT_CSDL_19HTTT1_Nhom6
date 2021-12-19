@@ -1,7 +1,5 @@
 ﻿-- T1: Khách hàng 1 xác nhận mua sản phẩm có mã SP26049509
 -- T2: Khách hàng 2 xác nhận mua sản phẩm có mã SP26049509
--- Số lượng sản phẩm hiện tại là 1
--- Số lượng sản phẩm mong muốn sau khi chạy các giao tác: 0
 
 BEGIN TRAN
 	DECLARE @SL INT 
