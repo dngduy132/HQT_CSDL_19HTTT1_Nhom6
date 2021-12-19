@@ -162,5 +162,10 @@ namespace HeThongVanChuyenHangOnl.KhachHang
         {
 
         }
+
+        private void comBoxHTTT_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

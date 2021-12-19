@@ -91,7 +91,7 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             this.btnTim.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(84)))), ((int)(((byte)(3)))));
             this.btnTim.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTim.ForeColor = System.Drawing.Color.White;
-            this.btnTim.Location = new System.Drawing.Point(590, 63);
+            this.btnTim.Location = new System.Drawing.Point(610, 63);
             this.btnTim.Name = "btnTim";
             this.btnTim.Size = new System.Drawing.Size(100, 38);
             this.btnTim.TabIndex = 5;
@@ -131,7 +131,7 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             // textKetQua
             // 
             this.textKetQua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textKetQua.Location = new System.Drawing.Point(590, 111);
+            this.textKetQua.Location = new System.Drawing.Point(610, 110);
             this.textKetQua.Name = "textKetQua";
             this.textKetQua.Size = new System.Drawing.Size(100, 27);
             this.textKetQua.TabIndex = 8;

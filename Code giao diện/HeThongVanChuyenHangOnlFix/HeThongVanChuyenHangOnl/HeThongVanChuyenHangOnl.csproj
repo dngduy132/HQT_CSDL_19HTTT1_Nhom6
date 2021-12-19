@@ -211,5 +211,23 @@
   <ItemGroup>
     <None Include="Resources\online-shopping-madam-sotoni-removebg-preview.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\people.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enterprise.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delivery-man.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delivery-man1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unauthorized-person.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\team.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

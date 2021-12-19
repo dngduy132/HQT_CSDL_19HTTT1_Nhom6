@@ -79,9 +79,9 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             // 
             this.comBoxTenDN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comBoxTenDN.FormattingEnabled = true;
-            this.comBoxTenDN.Location = new System.Drawing.Point(226, 73);
+            this.comBoxTenDN.Location = new System.Drawing.Point(236, 73);
             this.comBoxTenDN.Name = "comBoxTenDN";
-            this.comBoxTenDN.Size = new System.Drawing.Size(150, 28);
+            this.comBoxTenDN.Size = new System.Drawing.Size(168, 28);
             this.comBoxTenDN.TabIndex = 3;
             this.comBoxTenDN.SelectedIndexChanged += new System.EventHandler(this.comBoxTenDN_SelectedIndexChanged);
             // 
@@ -139,9 +139,9 @@ namespace HeThongVanChuyenHangOnl.KhachHang
             // 
             this.comBoxTenSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comBoxTenSP.FormattingEnabled = true;
-            this.comBoxTenSP.Location = new System.Drawing.Point(226, 114);
+            this.comBoxTenSP.Location = new System.Drawing.Point(236, 114);
             this.comBoxTenSP.Name = "comBoxTenSP";
-            this.comBoxTenSP.Size = new System.Drawing.Size(150, 28);
+            this.comBoxTenSP.Size = new System.Drawing.Size(168, 28);
             this.comBoxTenSP.TabIndex = 9;
             // 
             // panel1
