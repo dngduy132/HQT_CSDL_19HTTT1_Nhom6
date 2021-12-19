@@ -31,8 +31,13 @@ namespace HeThongVanChuyenHangOnl
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.nhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ChinhSuaThongTinDoanhNghiep = new System.Windows.Forms.ToolStripMenuItem();
+            this.ChinhSuaThongTinHoaDon = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.kháchHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.KH_XemThongTinDoanhNghiep = new System.Windows.Forms.ToolStripMenuItem();
             this.KH_XemThongTinSanPham = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,15 +54,10 @@ namespace HeThongVanChuyenHangOnl
             this.quảnTrịToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.QT_XemThongTinDoanhNghiep = new System.Windows.Forms.ToolStripMenuItem();
             this.CapNhatThongTinDoanhNghiep = new System.Windows.Forms.ToolStripMenuItem();
-            this.nhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ChinhSuaThongTinDoanhNghiep = new System.Windows.Forms.ToolStripMenuItem();
-            this.ChinhSuaThongTinHoaDon = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -69,16 +69,6 @@ namespace HeThongVanChuyenHangOnl
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(917, 497);
             this.panel1.TabIndex = 2;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::HeThongVanChuyenHangOnl.Properties.Resources.online_shopping_madam_sotoni_removebg_preview;
-            this.pictureBox1.Location = new System.Drawing.Point(210, 46);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(489, 414);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
             // 
             // menuStrip1
             // 
@@ -98,6 +88,63 @@ namespace HeThongVanChuyenHangOnl
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
+            // nhânViênToolStripMenuItem
+            // 
+            this.nhânViênToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ChinhSuaThongTinDoanhNghiep,
+            this.ChinhSuaThongTinHoaDon});
+            this.nhânViênToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nhânViênToolStripMenuItem.Image = global::HeThongVanChuyenHangOnl.Properties.Resources.team;
+            this.nhânViênToolStripMenuItem.Name = "nhânViênToolStripMenuItem";
+            this.nhânViênToolStripMenuItem.Size = new System.Drawing.Size(139, 29);
+            this.nhânViênToolStripMenuItem.Text = "Nhân viên ";
+            // 
+            // ChinhSuaThongTinDoanhNghiep
+            // 
+            this.ChinhSuaThongTinDoanhNghiep.Name = "ChinhSuaThongTinDoanhNghiep";
+            this.ChinhSuaThongTinDoanhNghiep.Size = new System.Drawing.Size(390, 30);
+            this.ChinhSuaThongTinDoanhNghiep.Text = "Chỉnh sửa thông tin doanh nghiệp";
+            this.ChinhSuaThongTinDoanhNghiep.Click += new System.EventHandler(this.ChinhSuaThongTinDoanhNghiep_Click);
+            // 
+            // ChinhSuaThongTinHoaDon
+            // 
+            this.ChinhSuaThongTinHoaDon.Name = "ChinhSuaThongTinHoaDon";
+            this.ChinhSuaThongTinHoaDon.Size = new System.Drawing.Size(390, 30);
+            this.ChinhSuaThongTinHoaDon.Text = "Chỉnh sửa thông tin hợp đồng ";
+            this.ChinhSuaThongTinHoaDon.Click += new System.EventHandler(this.ChinhSuaThongTinHopDong_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(147)))), ((int)(((byte)(0)))));
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.ForeColor = System.Drawing.Color.Black;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(917, 100);
+            this.panel2.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 28.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(101, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(733, 63);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "HỆ THỐNG MUA BÁN ONLINE";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::HeThongVanChuyenHangOnl.Properties.Resources.online_shopping_madam_sotoni_removebg_preview;
+            this.pictureBox1.Location = new System.Drawing.Point(210, 46);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(489, 414);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
             // kháchHàngToolStripMenuItem
             // 
             this.kháchHàngToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -108,8 +155,9 @@ namespace HeThongVanChuyenHangOnl
             this.KH_ThongKeSanPham,
             this.KH_MuaHang});
             this.kháchHàngToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kháchHàngToolStripMenuItem.Image = global::HeThongVanChuyenHangOnl.Properties.Resources.people;
             this.kháchHàngToolStripMenuItem.Name = "kháchHàngToolStripMenuItem";
-            this.kháchHàngToolStripMenuItem.Size = new System.Drawing.Size(132, 29);
+            this.kháchHàngToolStripMenuItem.Size = new System.Drawing.Size(152, 29);
             this.kháchHàngToolStripMenuItem.Text = "Khách hàng";
             // 
             // KH_XemThongTinDoanhNghiep
@@ -161,8 +209,9 @@ namespace HeThongVanChuyenHangOnl
             this.cậpNhậtThôngTinSảnPhẩmToolStripMenuItem,
             this.thêmMớiSảnPhẩmToolStripMenuItem});
             this.doanhNghiệpToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.doanhNghiệpToolStripMenuItem.Image = global::HeThongVanChuyenHangOnl.Properties.Resources.enterprise;
             this.doanhNghiệpToolStripMenuItem.Name = "doanhNghiệpToolStripMenuItem";
-            this.doanhNghiệpToolStripMenuItem.Size = new System.Drawing.Size(148, 29);
+            this.doanhNghiệpToolStripMenuItem.Size = new System.Drawing.Size(168, 29);
             this.doanhNghiệpToolStripMenuItem.Text = "Doanh nghiệp";
             // 
             // DN_XemDanhSachDonDatHang
@@ -191,8 +240,9 @@ namespace HeThongVanChuyenHangOnl
             this.tàiXếToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TX_NhanGiaoHang});
             this.tàiXếToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tàiXếToolStripMenuItem.Image = global::HeThongVanChuyenHangOnl.Properties.Resources.delivery_man1;
             this.tàiXếToolStripMenuItem.Name = "tàiXếToolStripMenuItem";
-            this.tàiXếToolStripMenuItem.Size = new System.Drawing.Size(80, 29);
+            this.tàiXếToolStripMenuItem.Size = new System.Drawing.Size(100, 29);
             this.tàiXếToolStripMenuItem.Text = "Tài xế";
             // 
             // TX_NhanGiaoHang
@@ -208,8 +258,9 @@ namespace HeThongVanChuyenHangOnl
             this.QT_XemThongTinDoanhNghiep,
             this.CapNhatThongTinDoanhNghiep});
             this.quảnTrịToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.quảnTrịToolStripMenuItem.Image = global::HeThongVanChuyenHangOnl.Properties.Resources.unauthorized_person;
             this.quảnTrịToolStripMenuItem.Name = "quảnTrịToolStripMenuItem";
-            this.quảnTrịToolStripMenuItem.Size = new System.Drawing.Size(95, 29);
+            this.quảnTrịToolStripMenuItem.Size = new System.Drawing.Size(115, 29);
             this.quảnTrịToolStripMenuItem.Text = "Quản trị";
             // 
             // QT_XemThongTinDoanhNghiep
@@ -226,52 +277,6 @@ namespace HeThongVanChuyenHangOnl
             this.CapNhatThongTinDoanhNghiep.Text = "Cập nhật thông tin doanh nghiệp";
             this.CapNhatThongTinDoanhNghiep.Click += new System.EventHandler(this.CapNhatThongTinDoanhNghiep_Click);
             // 
-            // nhânViênToolStripMenuItem
-            // 
-            this.nhânViênToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ChinhSuaThongTinDoanhNghiep,
-            this.ChinhSuaThongTinHoaDon});
-            this.nhânViênToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nhânViênToolStripMenuItem.Name = "nhânViênToolStripMenuItem";
-            this.nhânViênToolStripMenuItem.Size = new System.Drawing.Size(119, 29);
-            this.nhânViênToolStripMenuItem.Text = "Nhân viên ";
-            // 
-            // ChinhSuaThongTinDoanhNghiep
-            // 
-            this.ChinhSuaThongTinDoanhNghiep.Name = "ChinhSuaThongTinDoanhNghiep";
-            this.ChinhSuaThongTinDoanhNghiep.Size = new System.Drawing.Size(390, 30);
-            this.ChinhSuaThongTinDoanhNghiep.Text = "Chỉnh sửa thông tin doanh nghiệp";
-            this.ChinhSuaThongTinDoanhNghiep.Click += new System.EventHandler(this.ChinhSuaThongTinDoanhNghiep_Click);
-            // 
-            // ChinhSuaThongTinHoaDon
-            // 
-            this.ChinhSuaThongTinHoaDon.Name = "ChinhSuaThongTinHoaDon";
-            this.ChinhSuaThongTinHoaDon.Size = new System.Drawing.Size(390, 30);
-            this.ChinhSuaThongTinHoaDon.Text = "Chỉnh sửa thông tin hợp đồng ";
-            this.ChinhSuaThongTinHoaDon.Click += new System.EventHandler(this.ChinhSuaThongTinHopDong_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(147)))), ((int)(((byte)(0)))));
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.ForeColor = System.Drawing.Color.Black;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(917, 100);
-            this.panel2.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 28.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(101, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(733, 63);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "HỆ THỐNG MUA BÁN ONLINE";
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -287,11 +292,11 @@ namespace HeThongVanChuyenHangOnl
             this.Load += new System.EventHandler(this.Main_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

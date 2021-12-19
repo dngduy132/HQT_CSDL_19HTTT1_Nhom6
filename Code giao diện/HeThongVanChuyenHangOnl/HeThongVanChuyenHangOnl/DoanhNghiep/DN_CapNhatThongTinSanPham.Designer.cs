@@ -165,7 +165,7 @@ namespace HeThongVanChuyenHangOnl.DoanhNghiep
             this.btnXoa.ForeColor = System.Drawing.Color.White;
             this.btnXoa.Location = new System.Drawing.Point(520, 342);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(162, 47);
+            this.btnXoa.Size = new System.Drawing.Size(183, 47);
             this.btnXoa.TabIndex = 12;
             this.btnXoa.Text = "Xóa sản phẩm";
             this.btnXoa.UseVisualStyleBackColor = false;
