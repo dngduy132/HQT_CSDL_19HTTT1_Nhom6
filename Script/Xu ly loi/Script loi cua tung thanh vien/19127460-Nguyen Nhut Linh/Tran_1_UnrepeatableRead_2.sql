@@ -3,6 +3,7 @@
 --T2 : Quản trị đổi quận của doanh nghiệp 
 
 BEGIN TRAN
+	SET TRAN ISOLATION LEVEL REPEATABLE READ 
 	SELECT COUNT(MADN)
 	FROM dbo.DOANH_NGHIEP
 	WHERE TEN_DN = 'Trupebistor Direct' AND QUAN = N'Quận Tân Bình'
