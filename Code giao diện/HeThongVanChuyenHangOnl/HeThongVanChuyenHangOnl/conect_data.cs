@@ -10,7 +10,7 @@ namespace HeThongVanChuyenHangOnl
 {
     class conect_data
     {
-        public static string connectionString = @"Data Source=HONGUYENLEVY;Initial Catalog=NHOM6_HTDCH;Integrated Security=True";
+        public static string connectionString = @"Data Source=DUYNGUYEN\SQLEXPRESS;Initial Catalog=NHOM6_HTDCH;Integrated Security=True";
     }
 }
 
